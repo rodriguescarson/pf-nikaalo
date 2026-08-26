@@ -12,7 +12,8 @@ args=(exec --skip-git-repo-check -s workspace-write -C "$root" -o ".codex/out/$n
 start="$(date -u +%FT%TZ)"
 codex "${args[@]}" - < "$prompt" 2> ".codex/out/$name.stderr" || echo "codex exited non-zero (see .codex/out/$name.stderr)"
 end="$(date -u +%FT%TZ)"
-git add -A
+paths="$(grep -m1 '^PATHS:' "$prompt" | sed 's/^PATHS:[[:space:]]*//')"
+if [ -n "$paths" ]; then git add -A -- $paths; else git add -A; fi
 if git diff --cached --quiet; then echo "codex($name): no changes"; exit 0; fi
 git commit -q -m "codex($name): $(head -1 "$prompt" | sed 's/^# *//')" -m "Co-authored-by: Codex <codex@openai.com>"
 sha="$(git rev-parse --short HEAD)"

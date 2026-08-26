@@ -24,3 +24,23 @@ contribution is verifiable with `git log --grep='^codex('`.
    src/lib/session.ts            | 41 +++++++++++++++++++++
    13 files changed, 447 insertions(+)
 
+## 02-mock-apis — 2026-08-26T13:39:23Z (committed manually after the run: the runner script was edited mid-session)
+- prompt: `.codex/prompts/02-mock-apis.md`  · model: `default`
+- commit: `c8147c1` (parent `39e35da`)
+- files:
+   .codex/out/02-mock-apis.md                  |  21 ++++++
+   src/app/api/mock/demo/clock/route.ts        |  16 ++++
+   src/app/api/mock/employer/doe/route.ts      |  16 ++++
+   src/app/api/mock/epfo/claims/route.ts       |  40 ++++++++++
+   src/app/api/mock/epfo/fix/route.ts          |  18 +++++
+   src/app/api/mock/epfo/mark-exit/route.ts    |  21 ++++++
+   src/app/api/mock/epfo/member/[uan]/route.ts |  13 ++++
+   src/app/api/mock/epfo/otp/route.ts          |  25 +++++++
+   src/app/api/mock/epfo/preflight/route.ts    |  21 ++++++
+   src/app/api/mock/npci/bank-verify/route.ts  |  15 ++++
+   src/app/api/mock/session/route.ts           |  13 ++++
+   src/app/api/mock/uidai/ekyc/route.ts        |  14 ++++
+   src/lib/simulate.ts                         |  20 +++++
+   src/mock/store.ts                           | 111 ++++++++++++++++++++++++++++
+   14 files changed, 364 insertions(+)
+
