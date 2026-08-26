@@ -53,3 +53,12 @@ contribution is verifiable with `git log --grep='^codex('`.
    src/components/Timeline.tsx   | 88 +++++++++++++++++++++++++++++++++++++++++++
    3 files changed, 165 insertions(+)
 
+## 04-tests-assistant-passbook — 2026-08-26T14:13:01Z → 2026-08-26T14:16:14Z
+- prompt: `.codex/prompts/04-tests-assistant-passbook.md`  · model: `default`
+- commit: `91d0480` (parent `5e98832`)
+- files:
+   src/lib/__tests__/passbook.test.ts           | 26 ++++++++++++++++
+   src/lib/assistant/__tests__/intents.test.ts  | 45 +++++++++++++++++++++++++++
+   src/lib/assistant/__tests__/scripted.test.ts | 46 ++++++++++++++++++++++++++++
+   3 files changed, 117 insertions(+)
+
