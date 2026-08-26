@@ -61,9 +61,11 @@ export function ClaimsList({ rows }: { rows: ClaimRow[] }) {
         <Sheet className="p-5 text-sm text-ink-2">{t("claims.emptyFiltered")}</Sheet>
       ) : (
         <Sheet ledger>
-          {shown.map((r, i) => (
-            <Link key={r.id} href={`/status/${r.id}`} className="ledger-row hover:bg-paper-2 items-center">
-              <div className="flex items-center justify-center">
+          <ul>
+            {shown.map((r, i) => (
+              <li key={r.id} className="ledger-row hover:bg-paper-2 items-center">
+                <Link href={`/status/${r.id}`} className="col-span-3 grid grid-cols-[3.25rem_1fr_auto] items-center">
+                  <div className="flex items-center justify-center">
                 {r.bucket === "rejected" ? (
                   <span className="mark-x">
                     <Icon name="x" size={18} strokeWidth={2.5} />
@@ -77,20 +79,22 @@ export function ClaimsList({ rows }: { rows: ClaimRow[] }) {
                     <Icon name="clock" size={18} />
                   </span>
                 )}
-              </div>
-              <div className="px-4 py-3">
+                  </div>
+                  <div className="px-4 py-3">
                 <div className="t-num text-[0.9375rem] text-ink tnum">{r.id}</div>
                 <div className="text-sm text-ink-2 mt-0.5">
                   {r.forms} · {t("claims.filedOn", { date: formatDate(r.submittedAt, lang) })}
                 </div>
                 <div className="t-label text-sm mt-1 text-ink">{r.stageLabel}</div>
-              </div>
-              <div className="pr-4 py-3 text-right">
+                  </div>
+                  <div className="pr-4 py-3 text-right">
                 <div className="t-num text-[0.9375rem] text-ink tnum">{formatINR(r.net, lang)}</div>
                 <div className="text-2xs text-ink-3 t-num">{String(i + 1).padStart(2, "0")}</div>
-              </div>
-            </Link>
-          ))}
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Sheet>
       )}
     </>

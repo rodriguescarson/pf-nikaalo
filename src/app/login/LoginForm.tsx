@@ -22,6 +22,7 @@ export function LoginForm({ demos }: { demos: Demo[] }) {
   const [otp, setOtp] = useState<string[]>(Array(6).fill(""));
   const otpRefs = useRef<(HTMLInputElement | null)[]>([]);
   const uanId = useId();
+  const otpErrorId = useId();
   const digits = uan.replace(/\D/g, "").slice(0, 12);
   const grouped = digits.replace(/(\d{4})(?=\d)/g, "$1 ");
 
@@ -140,7 +141,9 @@ export function LoginForm({ demos }: { demos: Demo[] }) {
                     autoComplete={i === 0 ? "one-time-code" : "off"}
                     maxLength={6}
                     value={d}
-                    aria-label={`${t("login.otpLabel")} ${i + 1}`}
+                    aria-label={`${t("login.otpLabel")} ${i + 1}/${otp.length}`}
+                    aria-describedby={error ? otpErrorId : undefined}
+                    aria-invalid={error ? true : undefined}
                     onChange={(e) => onOtpChange(i, e.target.value)}
                     onKeyDown={(e) => {
                       if (e.key === "Backspace" && !otp[i] && i > 0) otpRefs.current[i - 1]?.focus();
@@ -152,7 +155,7 @@ export function LoginForm({ demos }: { demos: Demo[] }) {
               <p className="mt-1.5 text-sm text-ink-2">{t("login.otpHelp")}</p>
             </fieldset>
             {error ? (
-              <p role="alert" className="mt-2 text-sm mark-x flex items-center gap-1.5">
+              <p id={otpErrorId} role="alert" className="mt-2 text-sm mark-x flex items-center gap-1.5">
                 <Icon name="x" size={16} /> {error}
               </p>
             ) : null}

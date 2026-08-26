@@ -140,15 +140,17 @@ export function AgentRun({ uan, intent, memberName, latestEmployer }: { uan: str
       </div>
 
       {/* Result heading */}
-      {preflight && allRevealed ? (
-        <div className="mb-3 write-in">
-          <h2 className={`t-head text-xl ${preflight.canSubmit ? "text-ink" : "mark-x"}`}>{resultTitle}</h2>
-          <div className="mt-1 flex items-center gap-2 text-sm text-ink-2">
-            <span>{t("check.risk.label")}:</span>
-            <RiskMeter level={preflight.rejectionRisk} label={t(`check.risk.${preflight.rejectionRisk}`)} />
+      <div className="mb-3" aria-live="polite" aria-atomic="true">
+        {preflight && allRevealed ? (
+          <div className="write-in">
+            <h2 className={`t-head text-xl ${preflight.canSubmit ? "text-ink" : "mark-x"}`}>{resultTitle}</h2>
+            <div className="mt-1 flex items-center gap-2 text-sm text-ink-2">
+              <span>{t("check.risk.label")}:</span>
+              <RiskMeter level={preflight.rejectionRisk} label={t(`check.risk.${preflight.rejectionRisk}`)} />
+            </div>
           </div>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
 
       {/* The ledger of checks */}
       <ol className="sheet ledger" aria-label={t("check.title")} aria-busy={!allRevealed}>

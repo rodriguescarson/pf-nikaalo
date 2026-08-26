@@ -47,9 +47,9 @@ export default async function Landing() {
 
       {/* First sheet */}
       <section className="mx-auto w-full max-w-[34rem] px-4 -mt-6 pb-16">
-        <div className="sheet ledger">
+        <ol className="sheet ledger">
           {pillars.map((p, i) => (
-            <div key={p.key} className="ledger-row py-4">
+            <li key={p.key} className="ledger-row py-4">
               <div className="flex items-start justify-center pt-0.5 text-ink-3">
                 <span className="t-num text-sm tnum">{String(i + 1).padStart(2, "0")}</span>
               </div>
@@ -63,9 +63,9 @@ export default async function Landing() {
               <div className="pr-4 pt-0.5 text-tick" aria-hidden="true">
                 <Icon name="check" size={18} />
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
         <p className="t-head text-xl mt-10 text-ink">{t("landing.builtFor")}</p>
         <p className="mt-2 text-ink-2 text-[0.9375rem]">{t("landing.demoNote")}</p>
         <p className="mt-6 text-sm">

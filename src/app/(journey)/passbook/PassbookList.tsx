@@ -109,24 +109,30 @@ export function PassbookList({ entries, employers, balance }: { entries: Passboo
             {t("passbook.showing", { from: (page - 1) * PAGE + 1, to: Math.min(page * PAGE, filtered.length), n: filtered.length })}
           </p>
           <Sheet ledger>
-            <div className="ledger-row min-h-0 bg-paper-2/70 text-2xs text-ink-3 t-label uppercase tracking-wide">
-              <div className="px-2 py-1.5 text-center">{t("passbook.colMonth")}</div>
-              <div className="px-4 py-1.5">{t("passbook.colEmployer")} · {t("passbook.colType")}</div>
-              <div className="pr-4 py-1.5 text-right">{t("passbook.colAmount")}</div>
-            </div>
-            {slice.map((e, i) => (
-              <div key={`${e.month}-${e.establishmentId}-${e.type}-${i}`} className="ledger-row items-center min-h-[2.75rem]">
-                <div className="px-1 py-2 text-center t-num text-xs text-ink-2 tnum leading-tight">{monthLabel(e.month)}</div>
-                <div className="px-4 py-2">
-                  <div className="text-sm text-ink leading-snug">{e.employer}</div>
-                  <div className="text-2xs text-ink-3">
+            <div role="table" aria-label={t("passbook.title")}>
+              <div role="rowgroup">
+                <div role="row" className="ledger-row min-h-0 bg-paper-2/70 text-2xs text-ink-3 t-label uppercase tracking-wide">
+                  <div role="columnheader" className="px-2 py-1.5 text-center">{t("passbook.colMonth")}</div>
+                  <div role="columnheader" className="px-4 py-1.5">{t("passbook.colEmployer")} · {t("passbook.colType")}</div>
+                  <div role="columnheader" className="pr-4 py-1.5 text-right">{t("passbook.colAmount")}</div>
+                </div>
+              </div>
+              <div role="rowgroup">
+              {slice.map((e, i) => (
+                <div key={`${e.month}-${e.establishmentId}-${e.type}-${i}`} role="row" className="ledger-row items-center min-h-[2.75rem]">
+                  <div role="cell" className="px-1 py-2 text-center t-num text-xs text-ink-2 tnum leading-tight">{monthLabel(e.month)}</div>
+                  <div role="cell" className="px-4 py-2">
+                    <div className="text-sm text-ink leading-snug">{e.employer}</div>
+                    <div className="text-2xs text-ink-3">
                     {typeLabel[e.type]}
                     {sort !== "amount" && type === "all" && employer === "all" && !q ? <span className="hidden sm:inline"> · {t("passbook.runningTotal")} {formatINR(e.running, lang)}</span> : null}
                   </div>
                 </div>
-                <div className={`pr-4 py-2 t-num text-[0.9375rem] tnum ${e.type === "pension" ? "text-ink-2" : "text-ink"}`}>{formatINR(e.amount, lang)}</div>
+                  <div role="cell" className={`pr-4 py-2 t-num text-[0.9375rem] tnum ${e.type === "pension" ? "text-ink-2" : "text-ink"}`}>{formatINR(e.amount, lang)}</div>
+                </div>
+              ))}
               </div>
-            ))}
+            </div>
           </Sheet>
           <Pagination page={page} pages={pages} onPage={setPage} labels={{ prev: t("passbook.prev"), next: t("passbook.next"), page: (n) => t("passbook.page", { n }) }} />
         </>

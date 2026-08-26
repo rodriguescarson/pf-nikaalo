@@ -10,7 +10,14 @@ export function Stepper({ current, lang, minutes }: { current: JourneyStep; lang
   const idx = JOURNEY_STEPS.indexOf(current);
   return (
     <div className="mb-5 no-print" aria-label={t("common.step", { n: idx + 1, total: JOURNEY_STEPS.length })}>
-      <div className="flex items-center gap-1.5" role="progressbar" aria-valuemin={1} aria-valuemax={JOURNEY_STEPS.length} aria-valuenow={idx + 1}>
+      <div
+        className="flex items-center gap-1.5"
+        role="progressbar"
+        aria-valuemin={1}
+        aria-valuemax={JOURNEY_STEPS.length}
+        aria-valuenow={idx + 1}
+        aria-valuetext={t("common.step", { n: idx + 1, total: JOURNEY_STEPS.length })}
+      >
         {JOURNEY_STEPS.map((s, i) => (
           <span key={s} className={`h-1.5 flex-1 rounded-full ${i < idx ? "bg-ink" : i === idx ? "bg-cloth" : "bg-rule"}`} />
         ))}

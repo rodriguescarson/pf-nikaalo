@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import type { Intent, Lang } from "@/lib/rules/types";
 import { useList, useT } from "@/i18n/useT";
 import { Icon } from "./Icon";
@@ -39,6 +39,8 @@ export function Sahayak({ uan, intent, lang }: { uan: string; intent?: Intent; l
   const [provider, setProvider] = useState<"scripted" | "openai">("scripted");
   const recRef = useRef<SpeechRecognitionLike | null>(null);
   const listRef = useRef<HTMLDivElement | null>(null);
+  const dialogRef = useRef<HTMLDivElement | null>(null);
+  const closeRef = useRef<HTMLButtonElement | null>(null);
   const locale = lang === "hi" ? "hi-IN" : "en-IN";
   const suggestionsList = useList("assistant.suggestions");
 
@@ -51,6 +53,39 @@ export function Sahayak({ uan, intent, lang }: { uan: string; intent?: Intent; l
   useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
   }, [msgs]);
+  useEffect(() => {
+    if (!open) return;
+    const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    closeRef.current?.focus();
+    return () => opener?.focus();
+  }, [open]);
+
+  function close() {
+    recRef.current?.stop();
+    setOpen(false);
+  }
+
+  function trapFocus(event: KeyboardEvent<HTMLDivElement>) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      close();
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = dialogRef.current?.querySelectorAll<HTMLElement>(
+      'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+    );
+    if (!focusable?.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
 
   async function ask(q: string) {
     const query = q.trim();
@@ -117,9 +152,9 @@ export function Sahayak({ uan, intent, lang }: { uan: string; intent?: Intent; l
       </button>
 
       {open ? (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center sm:justify-center" role="dialog" aria-modal="true" aria-labelledby="sahayak-title">
-          <button type="button" className="absolute inset-0 bg-ink/40" aria-label={t("common.close")} onClick={() => setOpen(false)} />
-          <div className="relative w-full sm:max-w-[30rem] bg-sheet rounded-t-[var(--radius-cloth)] sm:rounded-[var(--radius-cloth)] shadow-cloth max-h-[85dvh] flex flex-col">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center sm:justify-center">
+          <button type="button" tabIndex={-1} aria-hidden="true" className="absolute inset-0 bg-ink/40" onClick={close} />
+          <div ref={dialogRef} onKeyDown={trapFocus} className="relative w-full sm:max-w-[30rem] bg-sheet rounded-t-[var(--radius-cloth)] sm:rounded-[var(--radius-cloth)] shadow-cloth max-h-[85dvh] flex flex-col" role="dialog" aria-modal="true" aria-labelledby="sahayak-title">
             <div className="cloth rounded-t-[var(--radius-cloth)] px-4 py-3 flex items-center gap-3">
               <div className="flex-1">
                 <h2 id="sahayak-title" className="t-head text-lg leading-tight">
@@ -127,7 +162,7 @@ export function Sahayak({ uan, intent, lang }: { uan: string; intent?: Intent; l
                 </h2>
                 <p className="text-xs text-white/80">{t("assistant.sub")}</p>
               </div>
-              <button type="button" className="tap px-2 rounded hover:bg-white/10" onClick={() => setOpen(false)} aria-label={t("common.close")}>
+              <button ref={closeRef} type="button" className="tap px-2 rounded hover:bg-white/10" onClick={close} aria-label={t("common.close")}>
                 <Icon name="x" size={20} />
               </button>
             </div>

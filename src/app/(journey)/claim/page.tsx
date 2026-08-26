@@ -58,8 +58,9 @@ export default async function ClaimPage() {
           {t("claim.formsChosen")}
         </h2>
         <Sheet ledger>
-          {sel.forms.map((f, i) => (
-            <div key={f} className="ledger-row">
+          <ul>
+            {sel.forms.map((f, i) => (
+              <li key={f} className="ledger-row">
               <div className="flex items-start justify-center pt-4 mark-tick">
                 <Icon name="check" size={20} strokeWidth={2.5} />
               </div>
@@ -70,10 +71,10 @@ export default async function ClaimPage() {
                 </p>
               </div>
               <div className="pr-4 pt-4 text-ink-3 t-num text-sm">{String(i + 1).padStart(2, "0")}</div>
-            </div>
-          ))}
-          {sel.notAllowed.map((n) => (
-            <div key={n.form} className="ledger-row bg-paper-2/60">
+              </li>
+            ))}
+            {sel.notAllowed.map((n) => (
+              <li key={n.form} className="ledger-row bg-paper-2/60">
               <div className="flex items-start justify-center pt-4 text-ink-3">
                 <Icon name="x" size={18} />
               </div>
@@ -84,8 +85,9 @@ export default async function ClaimPage() {
                 <p className="mt-1 text-sm text-ink-2 leading-snug">{t(n.reasonKey)}</p>
               </div>
               <div />
-            </div>
-          ))}
+              </li>
+            ))}
+          </ul>
         </Sheet>
       </section>
 

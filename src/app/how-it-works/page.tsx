@@ -22,21 +22,24 @@ export default async function HowItWorksPage() {
 
       <h2 className="t-label text-ink mb-2">{t("how.realTitle")}</h2>
       <Sheet ledger>
-        {real.map((line, i) => (
-          <div key={i} className="ledger-row">
+        <ul>
+          {real.map((line, i) => (
+            <li key={i} className="ledger-row">
             <div className="flex items-start justify-center pt-3.5 mark-tick">
               <Icon name="check" size={18} strokeWidth={2.5} />
             </div>
             <p className="px-4 py-3 text-[0.9375rem] text-ink leading-relaxed">{line}</p>
             <div />
-          </div>
-        ))}
+            </li>
+          ))}
+        </ul>
       </Sheet>
 
       <h2 className="t-label text-ink mt-8 mb-2">{t("how.mockTitle")}</h2>
       <Sheet ledger>
-        {mock.map((m, i) => (
-          <div key={i} className="ledger-row">
+        <ul>
+          {mock.map((m, i) => (
+            <li key={i} className="ledger-row">
             <div className="flex items-start justify-center pt-3.5 text-ink-3">
               <Icon name="info" size={18} />
             </div>
@@ -50,19 +53,22 @@ export default async function HowItWorksPage() {
               </dl>
             </div>
             <div />
-          </div>
-        ))}
+            </li>
+          ))}
+        </ul>
       </Sheet>
 
       <h2 className="t-label text-ink mt-8 mb-2">{t("how.scaleTitle")}</h2>
       <Sheet ledger>
-        {scale.map((line, i) => (
-          <div key={i} className="ledger-row">
+        <ol>
+          {scale.map((line, i) => (
+            <li key={i} className="ledger-row">
             <div className="flex items-start justify-center pt-3.5 text-ink-3 t-num text-sm">{String(i + 1).padStart(2, "0")}</div>
             <p className="px-4 py-3 text-[0.9375rem] text-ink-2 leading-relaxed">{line}</p>
             <div />
-          </div>
-        ))}
+            </li>
+          ))}
+        </ol>
       </Sheet>
 
       <h2 className="t-label text-ink mt-8 mb-2">{t("how.codexTitle")}</h2>
@@ -75,8 +81,9 @@ export default async function HowItWorksPage() {
 
       <h2 className="t-label text-ink mt-8 mb-2">{t("how.sourcesTitle")}</h2>
       <Sheet ledger>
-        {sources.map((s, i) => (
-          <div key={i} className="ledger-row">
+        <ol>
+          {sources.map((s, i) => (
+            <li key={i} className="ledger-row">
             <div className="flex items-start justify-center pt-3.5 text-ink-3 t-num text-sm">{String(i + 1).padStart(2, "0")}</div>
             <p className="px-4 py-3 text-sm leading-relaxed">
               <a href={s.url} target="_blank" rel="noreferrer" className="text-ink underline decoration-rule hover:decoration-ink">
@@ -84,8 +91,9 @@ export default async function HowItWorksPage() {
               </a>
             </p>
             <div />
-          </div>
-        ))}
+            </li>
+          ))}
+        </ol>
       </Sheet>
 
       <h2 className="t-label text-ink mt-8 mb-2">{t("how.limitsTitle")}</h2>

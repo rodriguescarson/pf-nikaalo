@@ -60,7 +60,8 @@ export function ReviewForm({ uan, intent, form121 }: { uan: string; intent: Inte
             onChange={(e) => setOtp(e.target.value.replace(/\D/g, "").slice(0, 6))}
             className="mt-2 w-40 tap rounded-[var(--radius-sheet)] border border-rule bg-sheet px-3 py-3 t-num text-xl tracking-[0.2em] text-ink"
             placeholder="••••••"
-            aria-describedby={`${id}-help`}
+            aria-describedby={`${id}-help${error ? ` ${id}-err` : ""}`}
+            aria-invalid={error ? true : undefined}
           />
           <div className="mt-1.5 flex items-center gap-3 text-sm text-ink-2">
             <span id={`${id}-help`}>{t("review.aadhaarOtpHelp")}</span>
@@ -68,7 +69,7 @@ export function ReviewForm({ uan, intent, form121 }: { uan: string; intent: Inte
           </div>
         </div>
         {error ? (
-          <p role="alert" className="mt-3 text-sm mark-x flex items-center gap-1.5">
+          <p id={`${id}-err`} role="alert" className="mt-3 text-sm mark-x flex items-center gap-1.5">
             <Icon name="x" size={16} /> {error}
           </p>
         ) : null}
