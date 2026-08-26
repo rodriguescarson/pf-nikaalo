@@ -77,7 +77,8 @@ export function AgentRun({ uan, intent, memberName, latestEmployer }: { uan: str
       setStruck((s) => ({ ...s, [check.id]: check }));
       const p = await runPreflight();
       setPreflight(p);
-      router.refresh();
+      // No router.refresh() here: a pending refresh swallowed the very next router.push("/claim") in testing,
+      // and nothing server-rendered on this page depends on the fix.
     } catch {
       setError(t("common.error"));
     } finally {
