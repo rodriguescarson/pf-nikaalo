@@ -82,6 +82,7 @@ body[lang="hi"] {
   line-height: 1.65;
 }
 
+@layer components {
 /* Ledger typography: headings, labels and figures in Anek; numerals tabular. */
 .t-head {
   font-family: var(--font-anek);
@@ -236,6 +237,7 @@ body[lang="hi"] {
 .tap {
   min-height: 3rem;
   min-width: 3rem;
+}
 }
 
 @media print {
