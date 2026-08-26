@@ -66,6 +66,7 @@ export function LoginForm({ demos }: { demos: Demo[] }) {
   }
 
   function onOtpChange(i: number, v: string) {
+    setError(null);
     const clean = v.replace(/\D/g, "");
     if (clean.length > 1) {
       // paste
