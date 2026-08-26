@@ -25,6 +25,19 @@ export function translate(lang: Lang, key: string, params?: Params): string {
   return raw.replace(/\{(\w+)\}/g, (_, k: string) => (params[k] != null ? String(params[k]) : `{${k}}`));
 }
 
+/** Array-valued entries (suggestion lists, bullet lists). Falls back to English, then []. */
+export function translateList<T = string>(lang: Lang, key: string): T[] {
+  const pick = (dict: unknown): T[] | undefined => {
+    let cur: unknown = dict;
+    for (const part of key.split(".")) {
+      if (cur == null || typeof cur !== "object") return undefined;
+      cur = (cur as Record<string, unknown>)[part];
+    }
+    return Array.isArray(cur) ? (cur as T[]) : undefined;
+  };
+  return pick(DICTS[lang]) ?? pick(DICTS.en) ?? [];
+}
+
 export function makeT(lang: Lang) {
   return (key: string, params?: Params) => translate(lang, key, params);
 }

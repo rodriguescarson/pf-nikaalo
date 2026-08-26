@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useMemo, type ReactNode } from "react";
 import type { Lang } from "@/lib/rules/types";
-import { makeT, DEFAULT_LANG } from "./index";
+import { makeT, translateList, DEFAULT_LANG } from "./index";
 
 const LangContext = createContext<Lang>(DEFAULT_LANG);
 
@@ -17,4 +17,9 @@ export function useLang(): Lang {
 export function useT() {
   const lang = useContext(LangContext);
   return useMemo(() => makeT(lang), [lang]);
+}
+
+export function useList<T = string>(key: string): T[] {
+  const lang = useContext(LangContext);
+  return useMemo(() => translateList<T>(lang, key), [lang, key]);
 }
