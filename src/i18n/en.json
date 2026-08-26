@@ -1,0 +1,586 @@
+{
+  "common": {
+    "appName": "PF Nikaalo",
+    "tagline": "Reject-proof your PF claim.",
+    "home": "PF Nikaalo home",
+    "nav": "Main",
+    "skipToContent": "Skip to content",
+    "offline": "You are offline. What is on screen still works; we will retry when you are back.",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "cancel": "Cancel",
+    "close": "Close",
+    "copy": "Copy",
+    "copied": "Copied",
+    "loading": "Loading",
+    "simulated": "Simulated",
+    "simulatedProvider": "Simulated: {provider}",
+    "days": "{n} days",
+    "dayRange": "{min}–{max} days",
+    "sameDay": "same day",
+    "you": "You",
+    "employer": "Your employer",
+    "epfo": "EPFO office",
+    "bank": "Your bank",
+    "step": "Step {n} of {total}",
+    "estMinutes": "About {n} min",
+    "whatNext": "What happens next",
+    "logout": "Sign out",
+    "signedInAs": "Signed in as {name}",
+    "uan": "UAN",
+    "amountInr": "₹{amount}",
+    "notNow": "Not now",
+    "learnMore": "Learn more",
+    "tryAgain": "Try again",
+    "error": "Something went wrong. Nothing was saved.",
+    "poweredBy": "Independent prototype by Carson Rodrigues for Build What Moves India"
+  },
+  "nav": {
+    "passbook": "Passbook",
+    "claims": "My claims",
+    "how": "How it works",
+    "start": "Start a claim"
+  },
+  "banner": {
+    "lead": "Independent hackathon prototype.",
+    "body": "Not EPFO or the Government of India. Every name, number and record here is synthetic."
+  },
+  "landing": {
+    "cover": "Khata",
+    "coverSub": "PF withdrawal · pre-checked",
+    "title": "Your PF claim, checked before you file it.",
+    "stat": "1 in 3",
+    "statLabel": "final-settlement claims get rejected",
+    "statSource": "EPFO 2023-24 figures, via Deccan Herald / Dataful",
+    "lead": "Most rejections are for things you could have seen first: a name that differs from Aadhaar, an exit date your employer never marked, a bank account that is not verified. PF Nikaalo runs those checks before you file, picks the right form for you, shows the money and the tax, and then tells you who is doing what, and when.",
+    "cta": "Open my khata",
+    "ctaSub": "Demo login · takes about 4 minutes",
+    "howItWorksLink": "See what is real and what is simulated",
+    "pillars": {
+      "check": {
+        "title": "Checked first",
+        "body": "Thirteen checks against the same records EPFO uses. Anything that would bounce is fixed here, before you file."
+      },
+      "form": {
+        "title": "No form numbers",
+        "body": "You say what you need in plain words. We pick Form 19, 10C or 31 and tell you why."
+      },
+      "money": {
+        "title": "Money and tax up front",
+        "body": "How much, how much tax, and how to avoid it if you are eligible. Before you commit."
+      },
+      "track": {
+        "title": "Tracked in words",
+        "body": "Who is acting, what happens next, and by when. Not a status code."
+      }
+    },
+    "builtFor": "Built for the citizen, not the counter.",
+    "demoNote": "Use any of the four demo accounts on the next screen."
+  },
+  "login": {
+    "title": "Open your khata",
+    "sub": "Enter your UAN. We send a one-time code to the mobile number on your record.",
+    "uanLabel": "Your 12-digit UAN",
+    "uanHelp": "The number on your payslip or passbook.",
+    "uanInvalid": "A UAN has exactly 12 digits.",
+    "uanUnknown": "No record for this UAN in the demo. Pick one of the four below.",
+    "sendOtp": "Send code",
+    "sending": "Sending",
+    "otpLabel": "6-digit code",
+    "otpHelp": "Demo: any six digits work.",
+    "otpSentTo": "Code sent to the mobile ending {last2}",
+    "otpInvalid": "Enter all six digits.",
+    "verify": "Open khata",
+    "verifying": "Checking",
+    "demoTitle": "Demo accounts",
+    "demoSub": "Four synthetic members, each with a different real-world problem. Tap one to fill it in.",
+    "demo": {
+      "100000000001": "Clean record. Short service, so tax applies.",
+      "100000000002": "Name on EPFO record differs from Aadhaar.",
+      "100000000003": "Employer never marked the date of exit.",
+      "100000000004": "Bank account failed verification; one claim already rejected."
+    },
+    "otpFrom": "Simulated: EPFO OTP"
+  },
+  "start": {
+    "title": "What do you need?",
+    "sub": "Plain words. We will work out the form.",
+    "options": {
+      "full_withdrawal": {
+        "title": "I left my job. I want all my PF money.",
+        "body": "Final settlement of your provident fund."
+      },
+      "both": {
+        "title": "Everything: PF and the pension part too.",
+        "body": "Final settlement plus your pension (EPS) withdrawal benefit."
+      },
+      "pension_withdrawal": {
+        "title": "Only the pension (EPS) part.",
+        "body": "Withdraw or certify your pension service."
+      },
+      "advance_unemployment": {
+        "title": "I need money now. It has been less than two months.",
+        "body": "An advance of up to 75% while you wait for final settlement."
+      }
+    },
+    "resume": "You have a claim in progress. Continue it?",
+    "resumeCta": "Continue my claim",
+    "startFresh": "Start over",
+    "greeting": "Namaste, {name}."
+  },
+  "check": {
+    "title": "Checking your record",
+    "sub": "Sahayak is reading the same records EPFO reads, line by line.",
+    "running": "Running check {n} of {total}",
+    "agentIntro": "Sahayak is checking your record",
+    "tool": {
+      "epfo": "Reading EPFO member record",
+      "uidai": "Verifying with UIDAI e-KYC",
+      "npci": "Validating bank account with NPCI",
+      "employer": "Checking employer filings (ECR)",
+      "history": "Reading your claim history"
+    },
+    "resultTitle": {
+      "clear": "Your claim is clear to file",
+      "blocked": "{n} thing would get this claim rejected",
+      "blockedPlural": "{n} things would get this claim rejected",
+      "warned": "Clear to file, with {n} thing to know"
+    },
+    "risk": {
+      "label": "Rejection risk",
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
+    "evidence": "Evidence",
+    "whoFixes": "Who fixes it",
+    "eta": "Usually",
+    "fixNow": "Fix it now",
+    "fixing": "Fixing",
+    "fixed": "Fixed",
+    "requestEmployer": "Ask my employer",
+    "requested": "Request sent",
+    "howToFix": "How to fix it",
+    "recheck": "Check again",
+    "continue": "Continue to my claim",
+    "cannotContinue": "Fix the circled lines first. EPFO would reject the claim as it stands.",
+    "shareEmployer": "Send the request to your employer on WhatsApp",
+    "UAN_ACTIVE": {
+      "label": "UAN is active",
+      "pass": "Your UAN is active.",
+      "fail": "Your UAN is not active. EPFO has to activate it before any claim.",
+      "warn": "Your UAN needs attention."
+    },
+    "AADHAAR_SEEDED": {
+      "label": "Aadhaar linked",
+      "pass": "Aadhaar is linked and verified.",
+      "fail": "Aadhaar is not linked to this UAN. Link it on the portal first.",
+      "warn": "Aadhaar link needs attention."
+    },
+    "NAME_MATCH": {
+      "label": "Name matches Aadhaar",
+      "pass": "The name on your EPFO record matches Aadhaar.",
+      "fail": "The name on your EPFO record does not match Aadhaar. EPFO rejects for this even when only a middle name is missing.",
+      "warn": "Name differs slightly from Aadhaar."
+    },
+    "DOB_MATCH": {
+      "label": "Date of birth matches",
+      "pass": "Date of birth matches Aadhaar.",
+      "fail": "Date of birth on your record does not match Aadhaar.",
+      "warn": "Date of birth needs attention."
+    },
+    "DOE_PRESENT": {
+      "label": "Date of exit marked",
+      "pass": "Your date of exit is on record.",
+      "fail": "Your employer has not marked your date of exit. The portal will not let you file a final settlement without it.",
+      "warn": "Date of exit needs attention."
+    },
+    "TWO_MONTH_WAIT": {
+      "label": "Waiting period over",
+      "pass": "The waiting period after exit is over.",
+      "fail": "Final settlement needs two months after your date of exit. You can take an advance now and settle later.",
+      "warn": "Waiting period almost over."
+    },
+    "BANK_KYC": {
+      "label": "Bank account verified",
+      "pass": "Your bank account is verified.",
+      "fail": "Your bank account is not verified. Money cannot be sent to an unverified account, so EPFO rejects.",
+      "warn": "Bank verification pending."
+    },
+    "BANK_NAME_MATCH": {
+      "label": "Bank account name",
+      "pass": "The name on the bank account matches.",
+      "fail": "The name on the bank account does not match your Aadhaar name.",
+      "warn": "The bank account name is a short form of your name. It usually passes, but a re-seed removes the doubt."
+    },
+    "PAN_SEEDED": {
+      "label": "PAN linked",
+      "pass": "PAN is linked and verified.",
+      "fail": "PAN is not linked.",
+      "warn": "PAN is not linked. If tax applies, it is deducted at 20% instead of 10%. Link it in a minute."
+    },
+    "NO_DUPLICATE_CLAIM": {
+      "label": "No duplicate claim",
+      "pass": "No other claim is pending.",
+      "fail": "A claim is already pending or settled for this. EPFO will reject a second one.",
+      "warn": "Check your earlier claims."
+    },
+    "SERVICE_OVERLAP": {
+      "label": "Service dates consistent",
+      "pass": "Your employment dates do not overlap.",
+      "fail": "Two employers report overlapping dates. EPFO holds claims until an employer corrects it.",
+      "warn": "Employment dates need attention."
+    },
+    "EPS_ELIGIBLE": {
+      "label": "Pension part",
+      "pass": "You can withdraw your pension (EPS) benefit.",
+      "fail": "Pension benefit is not payable for this service length.",
+      "warn": "With 10 or more years of service, the pension part becomes a scheme certificate instead of a withdrawal. You keep the pension."
+    },
+    "E_NOMINATION": {
+      "label": "e-Nomination",
+      "pass": "e-Nomination is filed.",
+      "fail": "e-Nomination is missing.",
+      "warn": "e-Nomination is not filed. Not needed for this claim, but it protects your family. Two minutes."
+    }
+  },
+  "fix": {
+    "UPDATE_PROFILE": {
+      "label": "Update my profile to match Aadhaar",
+      "steps": "On the member portal: Manage → Modify Basic Details → tick the fields that differ → verify with Aadhaar OTP. Because your UAN was issued after October 2017, no employer or document is needed."
+    },
+    "MARK_EXIT": {
+      "label": "Mark my own date of exit",
+      "steps": "On the member portal: Manage → Mark Exit → choose the employer → enter the last working day → verify with Aadhaar OTP. Allowed two months after your last contribution."
+    },
+    "RESEED_BANK": {
+      "label": "Re-seed my bank account",
+      "steps": "On the member portal: Manage → KYC → Bank → enter the account number and IFSC exactly as on your cheque or passbook, in your Aadhaar name → save. Your employer approves; NPCI validates the name."
+    },
+    "SEED_PAN": {
+      "label": "Link my PAN",
+      "steps": "On the member portal: Manage → KYC → PAN → enter PAN → it verifies against the income-tax database instantly."
+    },
+    "NAME_MISMATCH": {
+      "steps": "Ask your employer for a joint declaration (Annexure) with your Aadhaar copy, or use the portal's Modify Basic Details if your UAN was issued after October 2017."
+    },
+    "DOB_MISMATCH": {
+      "steps": "Modify Basic Details with Aadhaar OTP, or a joint declaration through your employer for older UANs."
+    },
+    "DOE_NOT_AVAILABLE": {
+      "steps": "Mark Exit yourself after two months, or ask your employer to file it in their monthly ECR."
+    },
+    "BANK_KYC_NOT_VERIFIED": {
+      "steps": "Re-seed the bank account in your Aadhaar name and ask your employer to approve the KYC."
+    },
+    "BANK_NAME_DIFFERS": {
+      "steps": "Get the bank to correct the account name to your Aadhaar name, or seed a different account that already matches."
+    },
+    "PAN_NOT_VERIFIED": {
+      "steps": "Link PAN under KYC. If your PAN name differs from Aadhaar, correct it with the income-tax department first."
+    },
+    "SERVICE_OVERLAP": {
+      "steps": "Ask the employer with the wrong dates to correct your date of joining or exit in their ECR."
+    },
+    "CLAIM_ALREADY_SETTLED": {
+      "steps": "Nothing to re-file. Check your passbook for the credit; if the money never arrived, raise a grievance on EPFiGMS."
+    },
+    "WRONG_FORM": {
+      "steps": "Come back and let us pick the form again; the waiting period or your service length changed what you can claim."
+    },
+    "UNCLEAR_CHEQUE": {
+      "steps": "Upload a clear photo of a cheque leaf or the passbook page with your name, account number and IFSC printed."
+    },
+    "PAYMENT_RETURNED": {
+      "steps": "The bank bounced the credit. Confirm the account is active and in your name, re-seed it, and request re-authorisation."
+    },
+    "PENDING_WITH_EMPLOYER": {
+      "steps": "Your employer has to approve. Send them a reminder; if they do not act, EPFO's grievance portal can escalate."
+    },
+    "EPS_NOT_ELIGIBLE": {
+      "steps": "Pension withdrawal needs at least six months of service. Below that, only the PF part is payable."
+    },
+    "SIGNATURE_DIFFERS": {
+      "steps": "For offline claims only. File online with Aadhaar OTP instead; no signature needed."
+    }
+  },
+  "claim": {
+    "title": "Your claim",
+    "sub": "We picked the form. You check the money.",
+    "formsChosen": "Forms we will file",
+    "why": "Why",
+    "notAllowedTitle": "Not this time",
+    "amountTitle": "What you will receive",
+    "employeeShare": "Your contributions",
+    "employerShare": "Employer contributions",
+    "interest": "Interest earned",
+    "pfGross": "PF balance",
+    "epsBenefit": "Pension (EPS) withdrawal benefit",
+    "epsNote": "Indicative: Table D factor for {years} years × wage capped at ₹15,000.",
+    "advanceCap": "Advance (75% of PF balance)",
+    "tds": "Tax deducted (TDS)",
+    "net": "Credited to your bank",
+    "tdsTitle": "About the tax",
+    "form121Title": "Can you avoid TDS?",
+    "form121Body": "If your total income this year is below the taxable limit, you can declare Form 121 (it replaced Forms 15G/15H on 1 April 2026) and no tax is deducted. This is a declaration to the income-tax department; declare it only if it is true.",
+    "form121Toggle": "Declare Form 121: my income this year is below the taxable limit",
+    "form121Ineligible": "Not needed: no tax applies to this claim.",
+    "bankTitle": "Where the money goes",
+    "bankLine": "Account ending {last4} · {ifsc}",
+    "bankNote": "Verified by NPCI in your Aadhaar name.",
+    "continue": "Review and file",
+    "serviceLine": "{years} years of service across {n} employers",
+    "serviceLineOne": "{years} years of service"
+  },
+  "forms": {
+    "FORM_19": "Form 19 · Final PF settlement",
+    "FORM_10C": "Form 10C · Pension withdrawal benefit",
+    "FORM_31": "Form 31 · PF advance",
+    "SCHEME_CERTIFICATE": "Scheme certificate · Pension service kept",
+    "rationale": {
+      "FORM_19": "You have left your job and two months have passed, so the whole PF balance can be settled with Form 19.",
+      "FORM_10C": "Fewer than ten years of pension service, so the pension (EPS) part is paid out as a withdrawal benefit with Form 10C.",
+      "FORM_31": "Final settlement is not open yet, so Form 31 gives you an advance of up to 75% now; the rest settles after the waiting period.",
+      "SCHEME_CERTIFICATE": "Ten or more years of pension service cannot be withdrawn; a scheme certificate keeps your pension rights for age 58."
+    },
+    "notAllowed": {
+      "tenYears": "Form 10C is not allowed after ten years of service; you get a scheme certificate instead.",
+      "wait": "Final settlement opens two months after your date of exit. Until then only an advance is possible."
+    }
+  },
+  "tds": {
+    "exempt": {
+      "fiveYears": "No TDS: five or more years of continuous service.",
+      "threshold": "No TDS: the claim is ₹50,000 or less.",
+      "reason": "No TDS: your exit was for a reason beyond your control (ill health or employer closure).",
+      "form121": "No TDS: you declared Form 121 (income below the taxable limit)."
+    },
+    "under5yrs": {
+      "pan": "TDS at 10% under section 192A: fewer than five years of service and the claim is above ₹50,000. PAN is linked.",
+      "noPan": "TDS at 20% under section 192A because PAN is not linked. Link PAN to bring it to 10%."
+    },
+    "rateLabel": "Rate"
+  },
+  "review": {
+    "title": "Review and file",
+    "sub": "This is what EPFO will receive.",
+    "member": "Member",
+    "forms": "Forms",
+    "amount": "Expected credit",
+    "tds": "Tax",
+    "bank": "Bank",
+    "undertaking": "I confirm the details are correct, I am not employed under EPF right now, and I understand a false declaration is an offence.",
+    "aadhaarOtp": "Sign with Aadhaar OTP",
+    "aadhaarOtpHelp": "Demo: any six digits.",
+    "file": "File my claim",
+    "filing": "Filing with EPFO",
+    "otpFrom": "Simulated: UIDAI Aadhaar OTP",
+    "fastTrack": "All checks passed with nothing to fix, so this claim qualifies for EPFO's 3-day auto-settlement.",
+    "standard": "This claim goes through the standard 20-day process."
+  },
+  "status": {
+    "title": "Claim {id}",
+    "sub": "Who is doing what, and by when.",
+    "filedOn": "Filed {date}",
+    "expectedCredit": "Money expected in your account by {date}",
+    "current": "Now",
+    "doneAt": "Done {date}",
+    "expectedBy": "Expected by {date}",
+    "actor": "Who",
+    "demoTitle": "Demo clock",
+    "demoBody": "This is a prototype: move time forward to see the claim progress.",
+    "plusOne": "+1 day",
+    "plusFive": "+5 days",
+    "reset": "Reset",
+    "today": "Today (demo): {date}",
+    "smsTitle": "What EPFO would text you",
+    "smsFrom": "EPFOHO",
+    "share": "Share on WhatsApp",
+    "print": "Save as PDF",
+    "receipt": "Claim receipt",
+    "whyRejected": "Why was it rejected?",
+    "refile": "Re-check and file again",
+    "SUBMITTED": {
+      "title": "Filed",
+      "actor": "You",
+      "next": "EPFO's field office picks it up.",
+      "sms": "Claim {id} received for UAN ending {last4}. Track it on PF Nikaalo."
+    },
+    "RECEIVED_FIELD_OFFICE": {
+      "title": "Received by field office",
+      "actor": "EPFO office",
+      "next": "A dealing assistant verifies KYC and service.",
+      "sms": "Claim {id} is with the EPFO field office."
+    },
+    "UNDER_PROCESS": {
+      "title": "Under process",
+      "actor": "EPFO office",
+      "next": "The amount is computed and approved.",
+      "sms": "Claim {id} is under process. No action needed from you."
+    },
+    "APPROVED": {
+      "title": "Approved",
+      "actor": "EPFO office",
+      "next": "Payment is sent to your bank by NEFT.",
+      "sms": "Claim {id} approved. Payment of ₹{amount} initiated to account ending {last4}."
+    },
+    "SETTLED": {
+      "title": "Settled",
+      "actor": "Your bank",
+      "next": "The credit lands within one to two working days.",
+      "sms": "Claim {id} settled. ₹{amount} credited to account ending {last4}."
+    },
+    "REJECTED": {
+      "title": "Rejected",
+      "actor": "EPFO office",
+      "next": "Fix the reason and file again.",
+      "sms": "Claim {id} rejected: {reason}. See what to do on PF Nikaalo."
+    }
+  },
+  "rejection": {
+    "title": "What the rejection means",
+    "sub": "EPFO's words, then ours.",
+    "epfoSaid": "EPFO said",
+    "meaning": "What it means",
+    "todo": "What to do",
+    "canRefile": "You can file again once this is fixed.",
+    "cannotRefile": "This claim cannot be filed again.",
+    "NAME_MISMATCH": { "epfo": "Name mismatch with Aadhaar / Member details mismatch", "plain": "The name EPFO holds for you is not the same as the one on your Aadhaar. Even a missing middle name counts." },
+    "DOB_MISMATCH": { "epfo": "Date of birth mismatch", "plain": "The date of birth on your EPFO record differs from Aadhaar." },
+    "DOE_NOT_AVAILABLE": { "epfo": "Date of exit not available", "plain": "Your employer never told EPFO that you left. Without an exit date, a final settlement cannot be processed." },
+    "BANK_KYC_NOT_VERIFIED": { "epfo": "KYC incomplete / Bank details not verified", "plain": "The bank account on your record was never verified, so EPFO has nowhere safe to send the money." },
+    "BANK_NAME_DIFFERS": { "epfo": "Bank account name mismatch", "plain": "The name on your bank account is not the same as your Aadhaar name, so the payment cannot be released." },
+    "PAN_NOT_VERIFIED": { "epfo": "PAN not verified", "plain": "Your PAN is missing or could not be verified. Tax has to be worked out before payment." },
+    "SERVICE_OVERLAP": { "epfo": "Service overlap detected", "plain": "Two employers report you working for them at the same time. EPFO waits until one of them corrects the dates." },
+    "CLAIM_ALREADY_SETTLED": { "epfo": "Claim already settled", "plain": "EPFO has already paid this claim. A second one for the same thing is rejected." },
+    "WRONG_FORM": { "epfo": "Wrong form selected", "plain": "The form filed does not match what you are eligible for right now." },
+    "UNCLEAR_CHEQUE": { "epfo": "Unclear cheque / passbook image", "plain": "The photo of your cheque or passbook could not be read." },
+    "PAYMENT_RETURNED": { "epfo": "Payment settled but money bounced", "plain": "EPFO sent the money, but your bank returned it. Usually the account is closed, inactive, or in another name." },
+    "PENDING_WITH_EMPLOYER": { "epfo": "Pending with employer / Rejected by employer", "plain": "Your employer has to approve something (KYC, exit date or the claim itself) and has not." },
+    "EPS_NOT_ELIGIBLE": { "epfo": "EPS not eligible", "plain": "Your pension service is too short for a withdrawal benefit." },
+    "SIGNATURE_DIFFERS": { "epfo": "Signature differs", "plain": "On a paper claim, the signature did not match the one on file." }
+  },
+  "passbook": {
+    "title": "Passbook",
+    "sub": "Every contribution, every employer.",
+    "search": "Search employer",
+    "filterAll": "All employers",
+    "filterType": "All entries",
+    "typeEmployee": "Your share",
+    "typeEmployer": "Employer share",
+    "typePension": "Pension (EPS)",
+    "typeInterest": "Interest",
+    "sortNewest": "Newest first",
+    "sortOldest": "Oldest first",
+    "sortAmount": "Largest first",
+    "colMonth": "Month",
+    "colEmployer": "Employer",
+    "colType": "Entry",
+    "colAmount": "Amount",
+    "runningTotal": "Running total",
+    "total": "Balance",
+    "showing": "Showing {from}–{to} of {n}",
+    "empty": "No entries match. Clear the filter to see everything.",
+    "clear": "Clear filters",
+    "page": "Page {n}",
+    "prev": "Previous page",
+    "next": "Next page",
+    "perEmployer": "{n} months · {employer}"
+  },
+  "claims": {
+    "title": "My claims",
+    "sub": "Everything you have filed, here or before.",
+    "filterAll": "All",
+    "filterPending": "In progress",
+    "filterSettled": "Settled",
+    "filterRejected": "Rejected",
+    "empty": "No claims yet. Start with a check; it takes four minutes.",
+    "emptyFiltered": "Nothing with that status.",
+    "start": "Start a claim",
+    "view": "View",
+    "filedOn": "Filed {date}"
+  },
+  "how": {
+    "title": "How it works, honestly",
+    "sub": "What is real code, what is simulated, and how it would run at scale.",
+    "realTitle": "What is real",
+    "real": [
+      "The rules engine: eligibility, form choice, amounts, TDS, status and rejection meanings are pure, tested TypeScript (52 unit tests). Every check on the pre-flight screen comes from it.",
+      "The complete journey: login, triage, checks, fixes, claim, review, filing, tracking and the rejection explainer all work end to end in your browser.",
+      "The language layer: English and Hindi from one dictionary, checked for parity at build time.",
+      "The assistant: answers come from the rules engine and your own record, not from a chatbot guessing."
+    ],
+    "mockTitle": "What is simulated, and what the real thing is",
+    "mock": [
+      { "name": "EPFO member record", "sim": "Four synthetic members in code.", "real": "EPFO member database (UAN, KYC, service history) via an approved API." },
+      { "name": "UIDAI e-KYC", "sim": "Returns the seeded Aadhaar record after a delay.", "real": "Aadhaar e-KYC through an AUA/KUA with consent capture and the member's OTP." },
+      { "name": "NPCI bank validation", "sim": "Compares the account name in code.", "real": "NPCI account-name verification (penny-drop or name-match API)." },
+      { "name": "Employer filings", "sim": "'Ask my employer' records a request.", "real": "Employer ECR workflow with reminders and escalation through EPFiGMS." },
+      { "name": "Claim status", "sim": "A schedule computed from the filing date; the demo clock moves time.", "real": "EPFO claim event stream (received, processed, approved, NEFT) pushed as notifications." },
+      { "name": "OTP and signing", "sim": "Any six digits.", "real": "Aadhaar OTP through UIDAI; consent and audit logged." }
+    ],
+    "scaleTitle": "What it would take to run this for real",
+    "scale": [
+      "Consent and privacy: DPDP-compliant consent for Aadhaar and bank checks; nothing stored beyond the session without purpose.",
+      "Reliability: every external call idempotent, queued and retried; a check that cannot run says so instead of guessing.",
+      "Audit: every check, fix and filing written to an append-only log the member can see.",
+      "Rules as code: the eligibility and TDS rules versioned with effective dates, so a rule change never silently rewrites old claims.",
+      "Accessibility: WCAG 2.2 AA, Hindi and more languages, works on 2G with the JavaScript off for the read-only parts."
+    ],
+    "codexTitle": "How Codex was used",
+    "codexBody": "Codex (OpenAI) was a build tool on this project, driven non-interactively from scripts. Each session is a separate commit with a Codex co-author line and an entry in CODEX_LOG.md in the repository, so the contribution is verifiable in git history.",
+    "sourcesTitle": "Rules and sources",
+    "sources": [
+      { "text": "Form 19 / 10C / 31 semantics, two-month wait, prerequisites", "url": "https://www.epfindia.gov.in/site_en/WhichClaimForm.php" },
+      { "text": "Self-service date of exit and profile corrections (UANs after Oct 2017)", "url": "https://www.newsonair.gov.in/epfo-simplifies-online-process-of-updating-member-profiles" },
+      { "text": "TDS under section 192A: 10% with PAN below five years, 20% without", "url": "https://taxgarden.in/blog/epf-pf-withdrawal-tax-rules-india-ay-2026-27" },
+      { "text": "Form 121 replaces Forms 15G/15H from 1 April 2026", "url": "https://www.business-standard.com/finance/personal-finance/epfo-replaces-form-15g-15h-with-121-what-it-means-for-withdrawing-money-126042900885_1.html" },
+      { "text": "Auto-settlement within 72 hours up to ₹5 lakh; 20-day outer limit", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2139291" },
+      { "text": "Rejection rates: about 26% of claims, one in three final settlements", "url": "https://insights.dataful.in/articles/epfo-claim-rejection-rate-at-26-in-2023-24" },
+      { "text": "Rejection reasons as EPFO phrases them", "url": "https://kustodian.life/resources/epf-claim-rejected-reasons-guide" }
+    ],
+    "limitsTitle": "Limits",
+    "limits": "EPS Table D factors and the no-PAN rate are indicative. The fixes shown are the portal's own steps as of August 2026; EPFO changes them. No government logo, data or system is used.",
+    "repo": "Source code on GitHub"
+  },
+  "assistant": {
+    "name": "Sahayak",
+    "open": "Ask Sahayak",
+    "title": "Sahayak",
+    "sub": "Answers from your own record and the rules. No guessing.",
+    "scripted": "Scripted assistant · no AI model",
+    "llm": "AI model answering from the rules engine",
+    "placeholder": "Ask in Hindi or English",
+    "send": "Send",
+    "listen": "Speak",
+    "listening": "Listening",
+    "stop": "Stop",
+    "speak": "Read aloud",
+    "voiceUnsupported": "Voice is not available in this browser. Typing works.",
+    "suggested": "Try asking",
+    "suggestions": [
+      "Why would my claim be rejected?",
+      "How much tax will be cut?",
+      "When will the money come?",
+      "What is Form 121?",
+      "My employer is not updating my exit date"
+    ],
+    "fallback": "I can answer about your checks, forms, the amount, tax, timelines and rejection reasons. Try one of the suggestions.",
+    "answers": {
+      "rejectRisk_clear": "Right now nothing on your record would get the claim rejected. File it.",
+      "rejectRisk_blocked": "As it stands, EPFO would reject for: {items}. Fix those on the checks screen and I will re-run.",
+      "tds_none": "No tax is deducted on this claim: {reason}",
+      "tds_some": "₹{amount} would be deducted ({rate}) because {reason} You would receive ₹{net}.",
+      "timeline_fast": "All checks passed, so this qualifies for auto-settlement: money usually lands in three to four working days.",
+      "timeline_standard": "The standard process takes up to 20 days; most claims settle in 12 to 18.",
+      "form121": "Form 121 is the declaration that your total income for the year is below the taxable limit. From 1 April 2026 it replaces Forms 15G and 15H. If it is true for you, declare it on the claim screen and no TDS is deducted.",
+      "doe": "If two months have passed since your last contribution, you can mark your own exit date on the portal (Manage → Mark Exit) with Aadhaar OTP. Before that, only your employer can. I can send them the request.",
+      "forms": "You do not need to know form numbers. Based on what you told me, we file: {forms}.",
+      "amount": "Your PF balance is ₹{pfGross}. After tax you would receive ₹{net}.",
+      "whoFixes": "For {check}: {actor} fixes it, usually in {eta}.",
+      "greeting": "Namaste. Ask me about your checks, the form, the money, the tax or the timeline."
+    }
+  }
+}
