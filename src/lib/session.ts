@@ -33,9 +33,8 @@ export async function getAppliedFixes(): Promise<string[]> {
   return v ? v.split(",").filter(Boolean) : [];
 }
 
-/** "Today" for the app: real UTC date plus the demo offset. ISO YYYY-MM-DD. */
+/** "Today" for the app: the calendar date in India (IST, UTC+5:30) plus the demo offset. ISO YYYY-MM-DD. */
 export function todayISO(offsetDays = 0): string {
-  const d = new Date();
-  d.setUTCDate(d.getUTCDate() + offsetDays);
+  const d = new Date(Date.now() + (330 + offsetDays * 24 * 60) * 60 * 1000);
   return d.toISOString().slice(0, 10);
 }
