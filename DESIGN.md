@@ -4,6 +4,7 @@ description: A kirana bahi-khata for your PF claim — red cloth cover, ruled wh
 colors:
   paper: "#fcfbf8"
   paper-2: "#f4f2ec"
+  paper-3: "#ebe8e0"
   sheet: "#ffffff"
   rule: "#d6dae5"
   rule-red: "#e5b3b3"
@@ -54,7 +55,57 @@ typography:
     fontWeight: 700
     fontVariation: "tabular-nums lining-nums"
     letterSpacing: "-0.01em"
+  lead:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Noto Sans Devanagari, sans-serif"
+    fontSize: "1.0625rem"
+    fontWeight: 400
+    lineHeight: 1.6
+  brand:
+    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontSize: "1.375rem"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.01em"
+  display-lg:
+    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontSize: "2.875rem"
+    fontWeight: 700
+    lineHeight: 1.05
+    letterSpacing: "-0.01em"
+  stat:
+    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontSize: "3.5rem"
+    fontWeight: 700
+    lineHeight: 1
+    fontVariation: "tabular-nums lining-nums"
+  stat-lg:
+    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontSize: "4.25rem"
+    fontWeight: 700
+    lineHeight: 1
+    fontVariation: "tabular-nums lining-nums"
+  figure-lg:
+    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontSize: "1.375rem"
+    fontWeight: 700
+    fontVariation: "tabular-nums lining-nums"
+  figure-xl:
+    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontSize: "1.5rem"
+    fontWeight: 700
+    fontVariation: "tabular-nums lining-nums"
+  base:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Noto Sans Devanagari, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  caption:
+    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Noto Sans Devanagari, sans-serif"
+    fontSize: "0.6875rem"
+    fontWeight: 400
+    lineHeight: 1.35
 rounded:
+  xs: "0.25rem"
   sheet: "0.375rem"
   cloth: "0.75rem"
   pill: "9999px"
@@ -143,7 +194,7 @@ on a fix, struck through and rewritten. Nothing looks official on purpose: no em
 A restrained neutral ground with one committed material colour and three ink-and-pencil semantic marks.
 
 - **Cloth** `#8e1a21` (lac red) — the cover: header band, sticky action bar, total strips, primary cloth buttons. Text on cloth is white. `cloth-deep` `#6e1218` for pressed/hover; `cloth-tint` `#f6e4e5` for selected rows and the visitor's own chat bubble.
-- **Paper** `#fcfbf8` — page ground (barely warm white, not cream). `paper-2` `#f4f2ec` for subtotal bands, hover rows, skeletons. `sheet` `#ffffff` — the ruled page.
+- **Paper** `#fcfbf8` — page ground (barely warm white, not cream). `paper-2` `#f4f2ec` for subtotal bands, hover rows, skeletons (`paper-3` `#ebe8e0` is the shimmer highlight only). `sheet` `#ffffff` — the ruled page.
 - **Rule** `#d6dae5` — every hairline: row borders, sheet borders, input borders. `rule-red` `#e5b3b3` — the single vertical margin rule inside a ledger.
 - **Ink** `#1b2140` (blue-black) — text and done markers. `ink-2` `#4f5772` secondary prose (5.5:1 on paper). `ink-3` `#6d7590` captions, indices, placeholders (4.6:1 on paper; never below 0.6875 rem on tinted grounds).
 - **Tick** `#1f6b45` (green pen) — clear/done; `tick-fill` `#e4f3ea`.
@@ -157,12 +208,12 @@ Contrast: all text pairs meet WCAG AA (ink-3 on paper 4.6:1 is the floor; white 
 
 Two families with a clear split of duties. **Anek Devanagari** (Ek Type, OFL; loaded via `next/font/google`, weights 500 and 700, Latin + Devanagari subsets) is the ledger hand: display, headline, title, labels, and every figure. **The system sans stack** carries body prose in both languages (Devanagari ships on every phone).
 
-- Display `2.375rem` (2.875 rem ≥ sm) / 1.05 / 700 / −0.01 em, balanced — the cover title only.
+- Display `2.375rem` (`display-lg` 2.875 rem ≥ sm) / 1.05 / 700 / −0.01 em, balanced — the cover title only. `stat` 3.5 rem (4.25 rem ≥ sm) for the single cover statistic; `brand` 1.375 rem for the header wordmark.
 - Headline `1.75rem` / 1.15 / 700 — page titles (`PageTitle`).
 - Title `1.25rem` / 1.15 / 700 — result headings ("1 thing would get this claim rejected").
-- Body `0.9375rem` / 1.5 (1.65 in Hindi) — prose, check messages, explanations. `1rem` on the cover lead.
+- Body `0.9375rem` / 1.5 (1.65 in Hindi) — prose, check messages, explanations. `base` 1 rem is the html default and the review sheet; `lead` 1.0625 rem for the cover lead, the tax explanation and EPFO's quoted phrase.
 - Label `0.8125rem` / 1.2 / 500 / +0.01 em — row titles, buttons, section heads, toolbar controls.
-- Figure — Anek 700 with `tabular-nums lining-nums` for every rupee amount, date, UAN, row index. Amounts are right-aligned; indices (`01`…`13`) are ink-3.
+- Figure — Anek 700 with `tabular-nums lining-nums` for every rupee amount, date, UAN, row index; `figure-lg` 1.375 rem for the total strip and the UAN field, `figure-xl` 1.5 rem for OTP boxes and the passbook balance. Amounts are right-aligned; indices (`01`…`13`) are ink-3.
 - Caption `0.6875rem` (`text-2xs`) — banner, simulated tags, evidence keys, source lines.
 
 Scale ratio ≈ 1.2, fixed rem steps (no fluid type). Headings use `text-wrap: balance`. No serif, no monospace anywhere.
@@ -188,7 +239,7 @@ Depth is paper on a counter: quiet, offset, blurred.
 
 ## Shapes
 
-- Sheets, inputs, segmented controls: `0.375rem` (a page corner).
+- Focus rings and skeleton bars: `0.25rem`. Sheets, inputs, segmented controls: `0.375rem` (a page corner).
 - Cloth objects (buttons, action bar container, passbook balance strip, Sahayak header): `0.75rem` (a bound cover).
 - Pills only for the "Simulated" tag, suggestion chips and the floating "Ask Sahayak" button.
 - Borders are 1 px `rule`; selected/emphasised borders switch to `cloth` with `cloth-tint` fill. No thick side stripes: state lives in the mark column, never in a coloured border.
