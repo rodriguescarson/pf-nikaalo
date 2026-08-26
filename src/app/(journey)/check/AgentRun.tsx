@@ -130,8 +130,9 @@ export function AgentRun({ uan, intent, memberName, latestEmployer }: { uan: str
                 )}
               </span>
               <span className={tools[tool.key] === "idle" ? "text-ink-3" : "text-ink-2"}>{t(`check.tool.${tool.key}`)}</span>
-              <span className="ml-auto">
-                <SimulatedTag provider={tool.provider} />
+              <span className="ml-auto shrink-0">
+                <span className="hidden sm:inline"><SimulatedTag provider={tool.provider} /></span>
+                <span className="sm:hidden"><SimulatedTag /></span>
               </span>
             </li>
           ))}
