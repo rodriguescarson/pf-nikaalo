@@ -121,7 +121,7 @@ export function PassbookList({ entries, employers, balance }: { entries: Passboo
                   <div className="text-sm text-ink leading-snug">{e.employer}</div>
                   <div className="text-2xs text-ink-3">
                     {typeLabel[e.type]}
-                    {sort !== "amount" && type === "all" && employer === "all" && !q ? <span> · {t("passbook.runningTotal")} {formatINR(e.running, lang)}</span> : null}
+                    {sort !== "amount" && type === "all" && employer === "all" && !q ? <span className="hidden sm:inline"> · {t("passbook.runningTotal")} {formatINR(e.running, lang)}</span> : null}
                   </div>
                 </div>
                 <div className={`pr-4 py-2 t-num text-[0.9375rem] tnum ${e.type === "pension" ? "text-ink-2" : "text-ink"}`}>{formatINR(e.amount, lang)}</div>

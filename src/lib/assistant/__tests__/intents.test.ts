@@ -37,7 +37,11 @@ describe("detectIntent", () => {
     expect(detectIntent("which form do I need to avoid tds")).toBe("forms");
   });
 
-  it.todo("routes the Devanagari greeting नमस्ते to greeting");
+  it("routes the Devanagari greeting नमस्ते to greeting", () => {
+    expect(detectIntent("नमस्ते")).toBe("greeting");
+    expect(detectIntent("नमस्ते, सहायक")).toBe("greeting");
+    expect(detectIntent("हाय")).toBe("greeting");
+  });
 
   it.each(["", "what is the weather"])("returns null for %j", (query) => {
     expect(detectIntent(query)).toBeNull();

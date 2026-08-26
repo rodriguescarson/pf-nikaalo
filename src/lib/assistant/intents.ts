@@ -15,7 +15,7 @@ export type IntentId =
   | "greeting";
 
 const P: Record<IntentId, RegExp[]> = {
-  greeting: [/^(hi|hello|hey|namaste|namaskar|नमस्ते|नमस्कार|हैलो|हाय)\b/i],
+  greeting: [/^(hi|hello|hey|namaste|namaskar|नमस्ते|नमस्कार|हैलो|हाय)(?=[\s!,.।]|$)/i],
   reject_risk: [
     /reject|rejection|bounce|fail|risk|problem|wrong|galat|खारिज|रिजेक्ट|अस्वीकार|दिक्कत|समस्या|गड़बड़|क्यों नहीं|kyu(n)? nahi/i,
     /क्या क्लेम (हो|मिल)/i,

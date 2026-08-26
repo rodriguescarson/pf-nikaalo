@@ -50,7 +50,11 @@ export function buildPassbook(member: Member): PassbookEntry[] {
     const s = sum(t);
     if (s <= 0) return;
     const k = target / s;
-    for (const r of raw) if (r.type === t) r.amount = Math.round(r.amount * k);
+    const rows = raw.filter((r) => r.type === t);
+    for (const r of rows) r.amount = Math.round(r.amount * k);
+    // Absorb rounding drift in the last entry so the ledger reconciles to the rupee.
+    const drift = target - rows.reduce((a, r) => a + r.amount, 0);
+    rows[rows.length - 1].amount += drift;
   };
   scale("employee", member.passbook.employeeShare);
   scale("employer", member.passbook.employerShare);

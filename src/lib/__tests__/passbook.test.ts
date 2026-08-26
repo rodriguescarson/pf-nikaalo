@@ -3,7 +3,16 @@ import { buildPassbook } from "@/lib/passbook";
 import { MEMBERS } from "@/mock/members";
 
 describe("buildPassbook", () => {
-  it.todo("reconciles every seeded employee, employer, pension, and interest total within ±3 rupees");
+  it("reconciles every seeded employee, employer, pension, and interest total within ±3 rupees", () => {
+    for (const member of Object.values(MEMBERS)) {
+      const entries = buildPassbook(member);
+      const sum = (type: string) => entries.filter((e) => e.type === type).reduce((a, e) => a + e.amount, 0);
+      expect(Math.abs(sum("employee") - member.passbook.employeeShare)).toBeLessThanOrEqual(3);
+      expect(Math.abs(sum("employer") - member.passbook.employerShare)).toBeLessThanOrEqual(3);
+      expect(Math.abs(sum("pension") - member.passbook.epsContribution)).toBeLessThanOrEqual(3);
+      expect(Math.abs(sum("interest") - member.passbook.interest)).toBeLessThanOrEqual(3);
+    }
+  });
 
   it.each(Object.values(MEMBERS))("sorts and attributes $name's entries", (member) => {
     const entries = buildPassbook(member);

@@ -5,6 +5,7 @@ import { mkdirSync } from "node:fs";
 
 const base = process.argv[2] ?? "http://localhost:3210";
 const uan = process.argv[3] ?? "100000000002";
+const only = process.argv[4] ? process.argv[4].split(",") : null;
 const out = ".impeccable/review";
 mkdirSync(out, { recursive: true });
 
@@ -18,6 +19,8 @@ const routes = [
   ["claims", "/claims"],
   ["passbook", "/passbook"],
   ["how", "/how-it-works"],
+  ["status", "/status/CLM-2026-07-0001"],
+  ["why", "/status/CLM-2026-07-0001/why"],
 ];
 
 const browser = await chromium.launch();
@@ -35,9 +38,10 @@ for (const [vp, size] of [
   ]);
   const page = await ctx.newPage();
   for (const [name, path] of routes) {
+    if (only && !only.includes(name)) continue;
     try {
-      await page.goto(base + path, { waitUntil: "networkidle", timeout: 60_000 });
-      if (name === "check") await page.waitForTimeout(9000);
+      await page.goto(base + path, { waitUntil: "load", timeout: 90_000 });
+      await page.waitForTimeout(name === "check" ? 12000 : 1500);
       await page.screenshot({ path: `${out}/${vp}-${name}.png`, fullPage: true });
       console.log("ok", vp, name, page.url());
     } catch (e) {
