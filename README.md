@@ -54,7 +54,7 @@ OTP: any six digits. Everything is synthetic.
 
 **Real code:** the rules engine in `src/lib/rules` — eligibility checks, form selection, amounts, EPS Table D,
 TDS under §192A, Form 121, status schedules (3-day fast track vs 20-day standard), rejection codes → fixes. Pure
-TypeScript, no I/O, **52 unit tests** (`pnpm test`). The complete journey, the i18n layer (English/Hindi from one
+TypeScript, no I/O, **94 unit tests** (`pnpm test`). The complete journey, the i18n layer (English/Hindi from one
 dictionary, parity enforced at build), the assistant's intent router, the passbook builder.
 
 **Simulated (and labelled as such in the UI and on `/how-it-works`):** the EPFO member record, UIDAI e-KYC, NPCI
@@ -70,7 +70,7 @@ Codex (OpenAI) was a build tool on this project, driven non-interactively (`code
 [`scripts/codex-task.sh`](scripts/codex-task.sh). Each session's prompt is committed under `.codex/prompts/`, its
 output under `.codex/out/`, and its diff is a separate commit with a `Co-authored-by: Codex` trailer. See
 [`CODEX_LOG.md`](CODEX_LOG.md) and `git log --grep='^codex('`. Units Codex implemented: the rules engine to a
-test oracle (52 tests green), the simulated backend and cookie session store, the Timeline / DemoClock / SMS
+test oracle (94 tests green), the simulated backend and cookie session store, the Timeline / DemoClock / SMS
 components, and additional test suites. Design, screens, copy (English and Hindi), the assistant and integration
 were done with Claude Code by the author.
 

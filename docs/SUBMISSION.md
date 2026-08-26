@@ -37,7 +37,7 @@ Tick the undertaking, six digits, File. Timeline appears. Press **+1 day** twice
 "Who is acting, what happens next, by when — and the SMS EPFO would send. Not a status code." Flip to Hindi for two seconds.
 
 **1:00–1:20 · how it's built (screen: repo + terminal)**
-"It's a Next.js app on Vercel. The rules — eligibility, forms, EPS, TDS, Form 121, status, rejection reasons — are a pure TypeScript engine with 52 unit tests." (`pnpm test` green on screen.) "EPFO, UIDAI, NPCI and the employer are simulated route handlers with real latency; every one is labelled in the UI, and the how-it-works page says what the real integration is."
+"It's a Next.js app on Vercel. The rules — eligibility, forms, EPS, TDS, Form 121, status, rejection reasons — are a pure TypeScript engine with 94 unit tests." (`pnpm test` green on screen.) "EPFO, UIDAI, NPCI and the employer are simulated route handlers with real latency; every one is labelled in the UI, and the how-it-works page says what the real integration is."
 
 **1:20–1:40 · Codex**
 Show `CODEX_LOG.md` and `git log --grep='^codex('`.
@@ -63,7 +63,7 @@ About one in three EPFO final-settlement claims is rejected, almost always for s
 
 PF Nikaalo is a complete citizen journey, in English and Hindi, that refuses to file what will bounce. You say what you need in plain words; it runs thirteen checks against the records EPFO uses and shows each failing line with evidence, who fixes it, how long it takes, and a working fix for the self-service cases. It picks the right form (19/10C/31/scheme certificate) and explains why, shows the amount as a ledger with the tax rule and a Form 121 declaration when that removes TDS, files with an Aadhaar OTP, and tracks the claim as who-is-doing-what-by-when with the SMS EPFO would send. A rejection explainer turns EPFO's phrases into actions. Sahayak answers questions, typed or spoken, from your own record.
 
-What is real: the rules engine (pure TypeScript, 52 tests), the whole journey, the language layer. What is simulated and labelled: EPFO, UIDAI, NPCI, employer filings, OTPs, claim progression. Nothing touches a live government system; all data is synthetic.
+What is real: the rules engine (pure TypeScript, 94 tests), the whole journey, the language layer. What is simulated and labelled: EPFO, UIDAI, NPCI, employer filings, OTPs, claim progression. Nothing touches a live government system; all data is synthetic.
 
 Built with Next.js on Vercel; Codex implemented the rules engine, mock backend and timeline components against my specs and tests, each session a verifiable commit.
 
