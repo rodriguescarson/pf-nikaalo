@@ -1,69 +1,80 @@
-import Image from "next/image";
+import Link from "next/link";
+import { getLang, getUan } from "@/lib/session";
+import { makeT } from "@/i18n";
+import { Icon, type IconName } from "@/components/Icon";
 
-export default function Home() {
+/** The closed ledger: red cloth cover, the title stamped on it, one fact, one action. Then the first sheet. */
+export default async function Landing() {
+  const lang = await getLang();
+  const uan = await getUan();
+  const t = makeT(lang);
+  const pillars: { key: "check" | "form" | "money" | "track"; icon: IconName }[] = [
+    { key: "check", icon: "shield" },
+    { key: "form", icon: "file" },
+    { key: "money", icon: "landmark" },
+    { key: "track", icon: "clock" },
+  ];
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="flex-1">
+      {/* Cover */}
+      <section className="cloth">
+        <div className="mx-auto w-full max-w-[34rem] px-4 pt-10 pb-12 sm:pt-14 sm:pb-16">
+          <div className="flex items-baseline justify-between border-b border-white/25 pb-3">
+            <span className="t-label uppercase tracking-[0.14em] text-white/80">{t("landing.cover")}</span>
+            <span className="t-label text-white/80">{t("landing.coverSub")}</span>
+          </div>
+          <h1 className="t-head text-[2.375rem] leading-[1.05] sm:text-[2.875rem] mt-8 max-w-[14ch]">{t("landing.title")}</h1>
+          <p className="mt-6 max-w-[60ch] text-[1.0625rem] leading-relaxed text-white/90">{t("landing.lead")}</p>
+          <div className="mt-8 flex items-end gap-4">
+            <div className="t-num text-[3.5rem] leading-none sm:text-[4.25rem]">{t("landing.stat")}</div>
+            <div className="pb-1.5">
+              <div className="t-label text-white/95 text-base leading-tight max-w-[18ch]">{t("landing.statLabel")}</div>
+              <div className="text-2xs text-white/70 mt-1">{t("landing.statSource")}</div>
+            </div>
+          </div>
+          <div className="mt-10">
+            <Link
+              href={uan ? "/start" : "/login"}
+              className="tap inline-flex items-center gap-3 rounded-[var(--radius-cloth)] bg-paper text-cloth-deep pl-5 pr-4 py-3 t-label text-base shadow-cloth hover:bg-white transition-colors"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              {t("landing.cta")}
+              <Icon name="arrowRight" size={20} />
+            </Link>
+            <p className="mt-3 text-sm text-white/75">{t("landing.ctaSub")}</p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* First sheet */}
+      <section className="mx-auto w-full max-w-[34rem] px-4 -mt-6 pb-16">
+        <div className="sheet ledger">
+          {pillars.map((p, i) => (
+            <div key={p.key} className="ledger-row py-4">
+              <div className="flex items-start justify-center pt-0.5 text-ink-3">
+                <span className="t-num text-sm tnum">{String(i + 1).padStart(2, "0")}</span>
+              </div>
+              <div className="pl-4 pr-4">
+                <div className="flex items-center gap-2">
+                  <Icon name={p.icon} size={18} className="text-cloth" />
+                  <h2 className="t-label text-[0.9375rem] text-ink">{t(`landing.pillars.${p.key}.title`)}</h2>
+                </div>
+                <p className="mt-1.5 text-[0.9375rem] leading-relaxed text-ink-2">{t(`landing.pillars.${p.key}.body`)}</p>
+              </div>
+              <div className="pr-4 pt-0.5 text-tick" aria-hidden="true">
+                <Icon name="check" size={18} />
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
+        <p className="t-head text-xl mt-10 text-ink">{t("landing.builtFor")}</p>
+        <p className="mt-2 text-ink-2 text-[0.9375rem]">{t("landing.demoNote")}</p>
+        <p className="mt-6 text-sm">
+          <Link href="/how-it-works" className="underline text-ink-2 hover:text-ink">
+            {t("landing.howItWorksLink")}
+          </Link>
+        </p>
+        <p className="mt-10 text-2xs text-ink-3">{t("common.poweredBy")}</p>
+      </section>
     </div>
   );
 }
