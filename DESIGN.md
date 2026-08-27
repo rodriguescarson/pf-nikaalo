@@ -32,6 +32,16 @@ colors:
   focus: "#2f5bea"
   white: "#ffffff"
   black: "#000000"
+  chart-1: "#1f7a3e"
+  chart-2: "#94c83d"
+  chart-3: "#c47a00"
+  chart-4: "#5b5fd6"
+  chart-muted: "#c9cfc5"
+  seq-1: "#e3f5e8"
+  seq-2: "#b7e3c5"
+  seq-3: "#7fcb98"
+  seq-4: "#3fa864"
+  seq-5: "#1f7a3e"
 typography:
   display:
     fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
@@ -262,6 +272,10 @@ reveal on scroll, the rupee figure counts up, a fixed line is struck through and
 - **Focus** `#2f5bea`, 3 px ring, 2 px offset. Translucent whites and inks (10–72 %) are used for glass, borders on dark, and glyph opacity.
 
 Contrast floor: ink-3 on canvas 4.7:1; ink on lime 12:1; white on green 5.2:1; white on dark 16:1; ochre on ochre-fill 6:1.
+
+## Charts (Insights tabs)
+
+Categorical order is fixed and validated (dataviz validator, light surface): `chart-1` green = your share, `chart-2` lime = employer share (contrast warning → always direct-labelled and every chart has a table view), `chart-3` amber = interest, `chart-4` indigo = pension. Sequential green ramp `seq-1..5` for the month heatmap. Marks: bars ≤ 24 px with 4 px rounded data-ends and 2 px surface gaps, 2 px lines, ≥ 8 px end markers with a surface ring, 10 % area wash, 1 px `rule` gridlines, text always in ink tokens, one direct label per group, legend whenever ≥ 2 series, hover crosshair/tooltips, `sr-only` data tables. Tabs (`Tabs`) are frosted pills, URL-synced via `?tab=`.
 
 ## Typography
 
