@@ -6,10 +6,10 @@ import { mkdirSync } from "node:fs";
 const base = process.argv[2] ?? "http://localhost:3210";
 const uan = process.argv[3] ?? "100000000002";
 const only = process.argv[4] ? process.argv[4].split(",") : null;
-const out = ".impeccable/review";
+const out = process.env.SHOTS_OUT ?? ".impeccable/review";
 mkdirSync(out, { recursive: true });
 
-const routes = [
+let routes = [
   ["landing", "/"],
   ["login", "/login"],
   ["start", "/start"],
@@ -23,6 +23,7 @@ const routes = [
   ["why", "/status/CLM-2026-07-0001/why"],
 ];
 
+for (const pair of (process.env.EXTRA ?? "").split(",").filter(Boolean)) { const [n, ...rest] = pair.split("="); routes.push([n, rest.join("=")]); }
 const browser = await chromium.launch();
 for (const [vp, size] of [
   ["mobile", { width: 390, height: 844 }],

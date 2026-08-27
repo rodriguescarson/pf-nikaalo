@@ -79,3 +79,7 @@ contribution is verifiable with `git log --grep='^codex('`.
    src/components/Timeline.tsx                   |  2 +-
    11 files changed, 138 insertions(+), 70 deletions(-)
 
+## 06-chart-primitives — 2026-08-27T05:45:52Z (NOT completed by Codex)
+- prompt: `.codex/prompts/06-chart-primitives.md`
+- Codex exited with "You have hit your usage limit … try again at Sep 25th, 2026" before writing any file (`.codex/out/06-chart-primitives.stderr`). The chart primitives were then written by the author with Claude Code against the same contract.
+
