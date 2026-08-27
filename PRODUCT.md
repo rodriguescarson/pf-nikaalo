@@ -34,6 +34,7 @@ The current portal is a form that accepts anything and rejects later; PF Nikaalo
 
 ## Brand Commitments
 - Name: PF Nikaalo. Tagline: "Reject-proof your PF claim."
+- Visual register pinned by Carson (2026-08-27): a modern fintech landing — bold display headline with one green accent word, pale grey-green canvas, lime + deep-green accents, glassy floating card mockups with product imagery, feature tiles with large background glyphs, a dark money widget on a lime band, reveal/float motion. The earlier red bahi-khata ledger world was replaced on this instruction.
 - Voice: a competent friend who has done this before — plain, direct, specific, no bureaucratic phrasing, no exclamation marks; Hindi is everyday Hindi, not Sanskritised.
 - Binding constraint: must never look official. No tricolour, no emblem, no "Ministry"/"Govt of India" cues, no EPFO logo. A visible "independent prototype" banner on every page.
 

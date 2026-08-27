@@ -1,156 +1,212 @@
 ---
 name: PF Nikaalo
-description: A kirana bahi-khata for your PF claim — red cloth cover, ruled white sheets, ink and pencil marks.
+description: Lime ledger — a fintech-bright civic app: pale canvas, glass cards, lime and deep-green accents, a dark money widget.
 colors:
-  paper: "#fcfbf8"
-  paper-2: "#f4f2ec"
-  paper-3: "#ebe8e0"
+  canvas: "#f3f4ef"
+  canvas-2: "#e9ebe3"
+  canvas-3: "#dfe2d8"
   sheet: "#ffffff"
-  rule: "#d6dae5"
-  rule-red: "#e5b3b3"
-  cloth: "#8e1a21"
-  cloth-deep: "#6e1218"
-  cloth-tint: "#f6e4e5"
-  ink: "#1b2140"
-  ink-2: "#4f5772"
-  ink-3: "#6d7590"
-  tick: "#1f6b45"
-  tick-fill: "#e4f3ea"
-  pencil: "#b42318"
-  pencil-fill: "#fde8e6"
-  ochre: "#8a5a00"
-  ochre-fill: "#fff1d6"
+  rule: "#e2e5dc"
+  rule-2: "#cfd4c7"
+  ink: "#0e1512"
+  ink-2: "#4b5652"
+  ink-3: "#6b7570"
+  lime: "#b6f036"
+  lime-2: "#d6f78a"
+  lime-hover: "#c3f552"
+  lime-deep: "#7bc41c"
+  green: "#1c7a3e"
+  green-deep: "#0f5a2c"
+  green-card: "#8fdc2f"
+  lime-band-mid: "#c9f55a"
+  mint: "#e6f7c8"
+  dark: "#15191a"
+  dark-2: "#232829"
+  dark-card: "#1f2a25"
+  tick: "#1c7a3e"
+  tick-fill: "#e3f5e8"
+  pencil: "#d1352b"
+  pencil-fill: "#fdebe9"
+  ochre: "#9a5d00"
+  ochre-fill: "#fff3d6"
   focus: "#2f5bea"
+  white: "#ffffff"
+  black: "#000000"
 typography:
   display:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
-    fontSize: "2.375rem"
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "2.75rem"
+    fontWeight: 700
+    lineHeight: 1.02
+    letterSpacing: "-0.025em"
+  display-md:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "3.5rem"
+    fontWeight: 700
+    lineHeight: 1.02
+    letterSpacing: "-0.025em"
+  display-lg:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "4rem"
+    fontWeight: 700
+    lineHeight: 1.02
+    letterSpacing: "-0.025em"
+  section:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "2rem"
     fontWeight: 700
     lineHeight: 1.05
-    letterSpacing: "-0.01em"
+    letterSpacing: "-0.025em"
+  section-lg:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "2.75rem"
+    fontWeight: 700
+    lineHeight: 1.05
+    letterSpacing: "-0.025em"
   headline:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
     fontSize: "1.75rem"
     fontWeight: 700
-    lineHeight: 1.15
-    letterSpacing: "-0.01em"
+    lineHeight: 1.05
+    letterSpacing: "-0.025em"
+  card-title:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "2.25rem"
+    fontWeight: 700
+    lineHeight: 1.05
   title:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "1.375rem"
+    fontWeight: 700
+    lineHeight: 1.1
+  title-sm:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
     fontSize: "1.25rem"
     fontWeight: 700
     lineHeight: 1.15
-  body:
-    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Noto Sans Devanagari, sans-serif"
-    fontSize: "0.9375rem"
-    fontWeight: 400
-    lineHeight: 1.5
-  label:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
-    fontSize: "0.8125rem"
-    fontWeight: 500
-    lineHeight: 1.2
-    letterSpacing: "0.01em"
-  figure:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+  brand:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "1.25rem"
     fontWeight: 700
-    fontVariation: "tabular-nums lining-nums"
-    letterSpacing: "-0.01em"
+    lineHeight: 1
   lead:
-    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Noto Sans Devanagari, sans-serif"
+    fontFamily: "Manrope, system-ui, sans-serif"
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.6
-  brand:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
-    fontSize: "1.375rem"
+  base:
+    fontFamily: "Manrope, system-ui, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.55
+  body:
+    fontFamily: "Manrope, system-ui, sans-serif"
+    fontSize: "0.9375rem"
+    fontWeight: 400
+    lineHeight: 1.55
+  label:
+    fontFamily: "Manrope, system-ui, sans-serif"
+    fontSize: "0.8125rem"
     fontWeight: 700
-    lineHeight: 1
-    letterSpacing: "-0.01em"
-  display-lg:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
-    fontSize: "2.875rem"
+    lineHeight: 1.2
+    letterSpacing: "0.005em"
+  caption:
+    fontFamily: "Manrope, system-ui, sans-serif"
+    fontSize: "0.6875rem"
+    fontWeight: 400
+    lineHeight: 1.35
+  figure:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
     fontWeight: 700
-    lineHeight: 1.05
-    letterSpacing: "-0.01em"
-  stat:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
-    fontSize: "3.5rem"
-    fontWeight: 700
-    lineHeight: 1
     fontVariation: "tabular-nums lining-nums"
-  stat-lg:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
-    fontSize: "4.25rem"
-    fontWeight: 700
-    lineHeight: 1
-    fontVariation: "tabular-nums lining-nums"
+    letterSpacing: "-0.02em"
   figure-lg:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
     fontSize: "1.375rem"
     fontWeight: 700
     fontVariation: "tabular-nums lining-nums"
   figure-xl:
-    fontFamily: "Anek Devanagari, Noto Sans Devanagari, Hind, system-ui, sans-serif"
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
     fontSize: "1.5rem"
     fontWeight: 700
     fontVariation: "tabular-nums lining-nums"
-  base:
-    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Noto Sans Devanagari, sans-serif"
-    fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: 1.5
-  caption:
-    fontFamily: "system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Noto Sans Devanagari, sans-serif"
-    fontSize: "0.6875rem"
-    fontWeight: 400
-    lineHeight: 1.35
+  widget:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "2.5rem"
+    fontWeight: 700
+    lineHeight: 1
+    fontVariation: "tabular-nums lining-nums"
+  widget-lg:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "3rem"
+    fontWeight: 700
+    lineHeight: 1
+    fontVariation: "tabular-nums lining-nums"
+  watermark:
+    fontFamily: "Bricolage Grotesque, Anek Devanagari, system-ui, sans-serif"
+    fontSize: "22rem"
+    fontWeight: 700
+    lineHeight: 1
 rounded:
-  xs: "0.25rem"
-  sheet: "0.375rem"
-  cloth: "0.75rem"
+  xs: "0.375rem"
+  sheet: "1rem"
+  cloth: "1.25rem"
+  tile: "1.75rem"
   pill: "9999px"
 spacing:
-  row: "3rem"
-  margin-col: "3.25rem"
-  gutter: "1rem"
+  row: "3.25rem"
+  mark-col: "3.25rem"
+  gutter: "1.25rem"
   column: "34rem"
+  page: "72rem"
 components:
-  button-primary:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.cloth-deep}"
-    typography: "{typography.label}"
-    rounded: "{rounded.cloth}"
-    padding: "0.75rem 1rem"
-    height: "3rem"
-  button-primary-hover:
-    backgroundColor: "{colors.sheet}"
-  button-cloth:
-    backgroundColor: "{colors.cloth}"
-    textColor: "{colors.sheet}"
-    typography: "{typography.label}"
-    rounded: "{rounded.cloth}"
-    padding: "0.625rem 1rem"
-    height: "3rem"
-  button-cloth-hover:
-    backgroundColor: "{colors.cloth-deep}"
-  button-outline:
-    backgroundColor: "transparent"
+  button-lime:
+    backgroundColor: "{colors.lime}"
     textColor: "{colors.ink}"
     typography: "{typography.label}"
-    rounded: "{rounded.cloth}"
+    rounded: "{rounded.pill}"
+    padding: "0.75rem 1.5rem"
+    height: "3rem"
+  button-lime-hover:
+    backgroundColor: "{colors.lime-hover}"
+  button-dark:
+    backgroundColor: "{colors.dark}"
+    textColor: "{colors.white}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
     padding: "0.625rem 1rem"
+    height: "3rem"
+  button-dark-hover:
+    backgroundColor: "{colors.dark-2}"
+  button-outline:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "0.625rem 1.25rem"
     height: "3rem"
   sheet:
     backgroundColor: "{colors.sheet}"
     rounded: "{rounded.sheet}"
-  ledger-row:
-    height: "{spacing.row}"
+  tile:
+    rounded: "{rounded.tile}"
+    padding: "1.5rem"
+  widget:
+    backgroundColor: "{colors.dark}"
+    textColor: "{colors.white}"
+    rounded: "{rounded.tile}"
+    padding: "2rem"
   input:
     backgroundColor: "{colors.sheet}"
     textColor: "{colors.ink}"
     rounded: "{rounded.sheet}"
     padding: "0.75rem"
     height: "3rem"
+  chip:
+    backgroundColor: "{colors.white}"
+    textColor: "{colors.ink-2}"
+    rounded: "{rounded.pill}"
+    padding: "0.375rem 0.75rem"
   tag-simulated:
     backgroundColor: "transparent"
     textColor: "{colors.ink-2}"
@@ -159,120 +215,108 @@ components:
   banner:
     backgroundColor: "{colors.ochre-fill}"
     textColor: "{colors.ochre}"
+    rounded: "{rounded.pill}"
   segmented-on:
     backgroundColor: "{colors.ink}"
-    textColor: "{colors.paper}"
+    textColor: "{colors.canvas}"
     rounded: "{rounded.sheet}"
     height: "2.5rem"
+  mark:
+    rounded: "{rounded.pill}"
+    size: "1.75rem"
 ---
 
 # Design System: PF Nikaalo
 
 ## Overview
 
-**Creative North Star: "The Bahi-Khata"**
+**Creative North Star: "The Lime Ledger"**
 
-The kirana shopkeeper's red cloth-bound ledger, the account book half of India has seen on a counter: a claim is a
-line the shopkeeper checks before he writes it. The cover is lac-red cloth and carries the name, the primary action
-and the running totals; the pages inside are white ruled sheets with a red margin rule, hairline rows and figures
-right-aligned in tabular numerals. Everything is written in blue-black ink. State is a mark before it is a colour:
-a green-pen tick means clear, a red-pencil circle means a problem, an ochre pencil note means caution.
+A civic tool that looks like the fintech app people already trust, not like a portal: a pale grey-green canvas
+with a soft lime glow, white glass cards that float, one lime action per screen, deep green as the accent word in
+every headline, and a charcoal money widget that shows the rupee figure in lime. Product imagery (a phone with a
+green tick, coins, a wallet) and large background glyphs give the surfaces energy; the journey underneath is still a
+ledger: numbered rows, right-aligned tabular figures, one decision per screen.
 
-The surface is Operate first: a citizen completing a task on a phone in daylight, so it is light-only, dense
-enough to read as a record and calm enough to trust. The one authored motion is a ledger line being written and,
-on a fix, struck through and rewritten. Nothing looks official on purpose: no emblem, no tricolour, no navy.
+State is a mark before it is a colour: a green tick in a mint circle means clear, a red cross in a rose circle means
+a problem, an amber triangle in a cream circle means caution. Motion is purposeful: cards float slowly, sections
+reveal on scroll, the rupee figure counts up, a fixed line is struck through and rewritten.
 
 **Key Characteristics:**
-- Committed colour: the cloth red owns the header band, the sticky action bar and every total strip (about a third of a screen); the sheets stay white.
-- The ledger row is the unit of layout: a 3.25 rem mark column, the entry, a right-aligned figure or index.
-- One expressive face (Anek Devanagari, Latin + Devanagari in one file) for heads, labels and figures; the system sans for prose.
-- Marks over hues: tick / circled cross / triangle note carry state; colour only reinforces.
-- Honesty is a component: the ochre banner on every page and the dashed "Simulated" pill beside every dependency.
+- Restrained ground, committed accents: canvas and white carry most of a screen; lime owns the primary action and the band; deep green is the accent word and the "clear" state; charcoal is the money widget and the fix button.
+- Two faces: Bricolage Grotesque for headlines, figures and card titles; Manrope for everything else; Anek Devanagari replaces Bricolage automatically under `lang="hi"`.
+- Glass chrome: the header and the action bar are frosted pills floating over the canvas.
+- Honesty is a component: the ochre pill under the header on every page, and a dashed "Simulated" tag beside every dependency.
+- Imagery is generated product photography, never government material.
 
 ## Colors
 
-A restrained neutral ground with one committed material colour and three ink-and-pencil semantic marks.
+- **Canvas** `#f3f4ef` (page), `canvas-2` `#e9ebe3` (subtotal bands, hover rows, skeleton), `canvas-3` `#dfe2d8` (shimmer). The body adds two fixed radial glows: lime at 22 % top-right, green at 8 % left.
+- **Sheet** `#ffffff` for cards; `.glass` = white at 72 % with an 18 px blur for the header, action bar and floating hero cards.
+- **Rule** `#e2e5dc` row dividers; `rule-2` `#cfd4c7` progress track and hairlines on the canvas.
+- **Ink** `#0e1512` text and dark buttons; `ink-2` `#4b5652` secondary prose; `ink-3` `#6b7570` captions, indices, placeholders (4.7:1 on canvas).
+- **Lime** `#b6f036` primary buttons, the band, the current step, the widget figure; `lime-2` `#d6f78a` pale tile and band end; `lime-band-mid` `#c9f55a`; `lime-deep` `#7bc41c` rings and glows; `lime-hover` `#c3f552`.
+- **Green** `#1c7a3e` accent word, done steps, "clear" marks, marquee icons, the green tile; `green-deep` `#0f5a2c` the Features pill and the dark-card gradient end; `green-card` `#8fdc2f` the claim-card gradient start.
+- **Dark** `#15191a` money widget, fix button, step numbers; `dark-2` hover; `dark-card` `#1f2a25` gradient start.
+- **Semantic:** tick/tick-fill, pencil/pencil-fill, ochre/ochre-fill — always paired with an icon.
+- **Focus** `#2f5bea`, 3 px ring, 2 px offset. Translucent whites and inks (10–72 %) are used for glass, borders on dark, and glyph opacity.
 
-- **Cloth** `#8e1a21` (lac red) — the cover: header band, sticky action bar, total strips, primary cloth buttons. Text on cloth is white. `cloth-deep` `#6e1218` for pressed/hover; `cloth-tint` `#f6e4e5` for selected rows and the visitor's own chat bubble.
-- **Paper** `#fcfbf8` — page ground (barely warm white, not cream). `paper-2` `#f4f2ec` for subtotal bands, hover rows, skeletons (`paper-3` `#ebe8e0` is the shimmer highlight only). `sheet` `#ffffff` — the ruled page.
-- **Rule** `#d6dae5` — every hairline: row borders, sheet borders, input borders. `rule-red` `#e5b3b3` — the single vertical margin rule inside a ledger.
-- **Ink** `#1b2140` (blue-black) — text and done markers. `ink-2` `#4f5772` secondary prose (5.5:1 on paper). `ink-3` `#6d7590` captions, indices, placeholders (4.6:1 on paper; never below 0.6875 rem on tinted grounds).
-- **Tick** `#1f6b45` (green pen) — clear/done; `tick-fill` `#e4f3ea`.
-- **Pencil** `#b42318` (red pencil) — blocking problem, negative money lines; `pencil-fill` `#fde8e6`. Distinct from cloth by material: cloth is a band, pencil is a mark.
-- **Ochre** `#8a5a00` — caution and the honesty banner; `ochre-fill` `#fff1d6`.
-- **Focus** `#2f5bea` — the 3 px focus ring, offset 2 px, everywhere.
-
-Contrast: all text pairs meet WCAG AA (ink-3 on paper 4.6:1 is the floor; white on cloth 9:1; ochre on ochre-fill 6.1:1; pencil on white 5.9:1; tick on white 6.2:1).
+Contrast floor: ink-3 on canvas 4.7:1; ink on lime 12:1; white on green 5.2:1; white on dark 16:1; ochre on ochre-fill 6:1.
 
 ## Typography
 
-Two families with a clear split of duties. **Anek Devanagari** (Ek Type, OFL; loaded via `next/font/google`, weights 500 and 700, Latin + Devanagari subsets) is the ledger hand: display, headline, title, labels, and every figure. **The system sans stack** carries body prose in both languages (Devanagari ships on every phone).
-
-- Display `2.375rem` (`display-lg` 2.875 rem ≥ sm) / 1.05 / 700 / −0.01 em, balanced — the cover title only. `stat` 3.5 rem (4.25 rem ≥ sm) for the single cover statistic; `brand` 1.375 rem for the header wordmark.
-- Headline `1.75rem` / 1.15 / 700 — page titles (`PageTitle`).
-- Title `1.25rem` / 1.15 / 700 — result headings ("1 thing would get this claim rejected").
-- Body `0.9375rem` / 1.5 (1.65 in Hindi) — prose, check messages, explanations. `base` 1 rem is the html default and the review sheet; `lead` 1.0625 rem for the cover lead, the tax explanation and EPFO's quoted phrase.
-- Label `0.8125rem` / 1.2 / 500 / +0.01 em — row titles, buttons, section heads, toolbar controls.
-- Figure — Anek 700 with `tabular-nums lining-nums` for every rupee amount, date, UAN, row index; `figure-lg` 1.375 rem for the total strip and the UAN field, `figure-xl` 1.5 rem for OTP boxes and the passbook balance. Amounts are right-aligned; indices (`01`…`13`) are ink-3.
-- Caption `0.6875rem` (`text-2xs`) — banner, simulated tags, evidence keys, source lines.
-
-Scale ratio ≈ 1.2, fixed rem steps (no fluid type). Headings use `text-wrap: balance`. No serif, no monospace anywhere.
+- Display 2.75 rem → 3.5 rem (sm) → 4 rem (lg), Bricolage 700, −0.025 em, line-height 1.02; one accent word in green.
+- Section 2 rem → 2.75 rem (sm); headline 1.75 rem (page titles); card-title 2.25 rem (closing card); title 1.375 rem (tile titles), title-sm 1.25 rem (result headings); brand 1.25 rem.
+- Lead 1.0625 rem / 1.6 for hero copy and explanations; base 1 rem; body 0.9375 rem / 1.55; label 0.8125 rem / 700 for buttons, chips, row titles and section labels; caption 0.6875 rem.
+- Figures: Bricolage 700 tabular; figure-lg 1.375 rem (totals, UAN), figure-xl 1.5 rem (OTP, hero claim number, passbook balance), widget 2.5 rem → 3 rem for the money widget; a 22 rem ₹ watermark at 5 % ink sits behind the lime band.
+- Hindi: `[lang="hi"]` switches display and figures to Anek Devanagari and raises body line-height to 1.7.
 
 ## Layout
 
-- One column, `max-width: 34rem`, `1rem` gutters, centred on desktop; the phone is the design width and desktop simply centres it.
-- Header band (cloth, 3.5 rem) → ochre honesty banner → optional offline bar → page. Journey pages open with the 6-step `Stepper` (segments: done ink, current cloth, future rule).
-- Page padding: `pt-6`, `pb-32` so the sticky action bar never covers content; sections separated by `mt-7`, a label above each sheet with `mb-2`.
-- **Ledger row**: grid `3.25rem 1fr auto`, `min-height 3rem`, `border-bottom 1px rule`; the `.ledger` container draws the red margin rule at `left: 3.25rem`. Rows are `align-items: start` by default; money rows use `items-center` and `min-h-[2.75rem]`.
-- **Action bar**: fixed to the bottom, cloth, one primary button (paper on cloth) full width, an optional note line above it, `env(safe-area-inset-bottom)` padded.
-- Lists: toolbar row (search, filters, sort) wraps and never hides; 12 rows per page; a short "Showing x–y of n" line in caption size above the sheet.
-- Responsive: header nav labels hide below `md` (icon + `aria-label`), running totals and long "Simulated: provider" pills hide below `sm`.
+- Page frame 72 rem for the landing, 34 rem for the journey; 1.25 rem gutters.
+- Header: sticky frosted pill, 3.5 rem tall, 0.75 rem inset from the top; brand left, nav right (icons only below md), lime "Start a claim" only when signed out.
+- Banner: an ochre pill directly under the header, full page width.
+- Journey pages: progress pills (done green, current lime with a lime halo, rest `rule-2`) → title → sheets separated by 1.75 rem; the floating action bar sits 0.75 rem above the bottom edge plus `safe-area-inset-bottom`.
+- Ledger row: grid `3.25rem 1fr auto`, min 3.25 rem, divider `rule`; marks live in the first column, indices in the last.
+- Landing: hero grid 1.05fr/1fr at lg with the image column a 4:3 stage (5:4 on phones) holding three absolutely positioned cards; marquee strip; 4-tile feature grid (1 / 2 / 4 columns); lime band with the widget and three steps; closing sheet.
 
 ## Elevation & Depth
 
-Depth is paper on a counter: quiet, offset, blurred.
-
-- `shadow-sheet`: `0 1px 2px rgb(27 33 64 / .08), 0 10px 28px -14px rgb(27 33 64 / .28)` — every sheet.
-- `shadow-cloth`: `0 2px 4px rgb(60 10 14 / .25), 0 14px 34px -14px rgb(60 10 14 / .5)` — the action bar, the cover CTA, the Sahayak sheet.
-- The cloth itself has a faint diagonal weave (`repeating-linear-gradient` at 135°, 2.5 % white) and a soft top highlight; nothing else uses gradients.
-- No glass, no zero-offset halos, no hard offset shadows. Hover on rows = `paper-2`; hover on cloth = `cloth-deep` or `white/10`.
+- `shadow-sheet` `0 1px 2px rgb(14 21 18/.05), 0 12px 40px -16px rgb(14 21 18/.18)` on cards and glass.
+- `shadow-cloth` `0 4px 12px rgb(14 21 18/.12), 0 24px 60px -20px rgb(14 21 18/.35)` on the widget, floating cards and lifted tiles.
+- `shadow-lime` `0 8px 30px -10px rgb(123 196 28/.6)` under lime buttons and the orbit dot.
+- Glass = blur 18 px + saturate 1.3 + 70 % white border. Gradients only on the claim card (`green-card → green`), the dark card, the lime band and the widget's lime glow; the hero image is multiplied onto the canvas.
 
 ## Shapes
 
-- Focus rings and skeleton bars: `0.25rem`. Sheets, inputs, segmented controls: `0.375rem` (a page corner).
-- Cloth objects (buttons, action bar container, passbook balance strip, Sahayak header): `0.75rem` (a bound cover).
-- Pills only for the "Simulated" tag, suggestion chips and the floating "Ask Sahayak" button.
-- Borders are 1 px `rule`; selected/emphasised borders switch to `cloth` with `cloth-tint` fill. No thick side stripes: state lives in the mark column, never in a coloured border.
-- Marks: tick 20 px / 2.5 stroke; problem = 28 px circle path (drawn with `circle-in`) around a 16 px cross; caution = triangle 20 px. Icons are Lucide, one stroke weight (2), never emoji.
+- Pills for buttons, chips, banner, marks, header, tags and the stat chip.
+- `1rem` sheets and inputs; `1.25rem` action bar and the hero cards; `1.75rem` tiles, widget and the closing card; `0.375rem` focus rings and skeleton bars.
+- Marks: 1.75 rem circles (`mark` + `mark-tick` / `mark-x` / `mark-note`) with 16–20 px icons; the circled-cross draw-on for a blocking line.
+- Icons are Lucide, stroke 2; tile glyphs are the same icons at 62 % width, 16 % opacity, bottom-right.
 
 ## Components
 
-- **Header**: cloth band; brand in Anek 1.375 rem; nav links 48 px tall with icon + label (label ≥ md); language toggle shows the *other* language's abbreviation.
-- **Banner**: ochre-fill strip under the header on every page; caption size; `role="note"`.
-- **Stepper**: six segments + "Step n of 6" and an estimated minutes chip.
-- **Sheet / ledger row**: see Layout. Row index in the right column as a figure; the mark column holds the state glyph or the index on neutral rows.
-- **CheckCard (a ledger row)**: label, message, evidence `dl` (key in ink-3, value in figure style), "Who fixes it / Usually", a `details` disclosure for steps, then the action: cloth button "Fix it now · <action>" or outline button "Ask my employer · <name>". A fixed line keeps the struck old message (line-through in pencil, 2 px) above the rewritten one.
-- **Amount ledger**: labelled rows, a `paper-2` subtotal band, the TDS row in pencil with a triangle, and the total as a cloth strip with the figure at 1.375 rem.
-- **Inputs**: 48 px tall, `rule` border, sheet background, figure typography for numbers (UAN 1.375 rem tracked 0.08 em; OTP boxes 56 px, one digit each, auto-advance, paste-aware).
-- **Buttons**: primary = paper on cloth (inside the action bar); cloth = cloth on white pages; outline = 1 px `ink/30`; all 48 px min-height, label typography, icon 16–20 px after the text. Disabled = 50 % opacity, never a colour change.
-- **Segmented / Select / Search**: 40–48 px, sheet background, `rule` border; the active segment inverts to ink on paper.
-- **Timeline**: vertical transit line in the mark column; done = filled ink circle with white tick, current = cloth ring with dot, future = hollow `rule` ring, rejected = pencil circled cross; date as a figure on the right.
-- **DemoClock**: a small sheet with three outline buttons and a "Simulated" tag; never styled as part of the product.
-- **SMS preview**: `paper-2` bubble, max 22 rem, sender in caption label.
-- **Sahayak**: floating ink pill bottom-right; bottom sheet on phones / centred dialog ≥ sm; cloth header; a provider line (scripted vs model) under it; suggestion chips; mic + text + send.
-- **Skeleton**: `paper-2` shimmer bars inside the same ledger rows the content will occupy.
+- **Header / ActionBar**: `.glass` pills; primary = `.btn-lime` pill (translateY −1 px on hover); secondary = white outline pill; dark = `.btn-dark`.
+- **Stepper**: six 0.5 rem pills; "Step n of 6" and a minutes chip beneath.
+- **Sheet / ledger row**: as Layout; hover rows `canvas-2`.
+- **CheckCard row**: mark → label, message, evidence `dl`, "Who fixes it / Usually", `details` steps, then `.btn-dark` "Fix it now · <action>" or an outline "Ask my employer"; a fixed row keeps the struck old line above the new one.
+- **Amount ledger**: rows, `canvas-2` subtotal band, TDS row in pencil, total as a `.cloth` strip (dark, figure-lg).
+- **Money widget** (`.cloth` tile): status pill, label, widget-size lime figure that counts up, two outline pills, lime tick.
+- **Feature tile**: 18 rem min height, 1.5 rem padding, icon in a 2.75 rem circle, title, body pinned to the bottom, glyph behind; image tiles use a bottom ink gradient for the caption.
+- **Hero cards**: `.card-green` claim card (float-a), `.glass` checks card with a 13-bar chart (float-b, hidden on phones), `.glass` stat chip (float-c); two concentric rings, the outer static, the inner orbiting a lime dot.
+- **Marquee**: pill list duplicated, 28 s linear, edge-masked.
+- **Timeline / DemoClock / SmsPreview / Sahayak / ListToolbar / Pagination**: unchanged behaviour, restyled through the shared tokens (white sheets, pill controls, ink-on-canvas segmented "on" state).
 
 ## Do's and Don'ts
 
-- Do put state in the mark column first (tick / circled cross / triangle) and let colour follow; never carry meaning by colour alone.
-- Do right-align every rupee figure and date in tabular numerals; do use Indian grouping (`₹3,20,000`).
-- Do keep the cloth for bands and totals; a cloth button on a white page is the only other use.
-- Do keep the honesty banner and a "Simulated" tag beside every dependency, in both languages.
-- Do write copy as a competent friend: plain, specific, no exclamation marks, Hindi as everyday Hindi.
-- Don't use cream, parchment or serif display — the paper is white, the hand is Anek.
-- Don't add government emblems, tricolour, navy "portal" blue, or anything that reads as official.
-- Don't introduce cards inside sheets, coloured side borders, gradient text, glass, or decorative motion; the only authored motion is the ledger write-in and the strike/rewrite.
-- Don't drop below 48 px tap targets or 4.5:1 text contrast; don't put ink-3 on `paper-2` below caption size.
-- Don't hide list controls behind menus on phones; wrap them.
+- Do give every screen exactly one lime action; everything else is outline, dark or text.
+- Do keep the accent word: one green word per headline, never two colours in one word.
+- Do put state in a circular mark with an icon; colour reinforces, it never carries meaning alone.
+- Do keep figures in tabular Bricolage and right-aligned; Indian grouping always.
+- Do label every simulated dependency and keep the ochre banner on every page.
+- Don't add tricolour, emblems, navy portal blue, or anything that reads as official; imagery is generated product photography with no text.
+- Don't stack cards inside cards, add coloured side borders, or gradient text.
+- Don't animate on load beyond reveal/float/count-up; keep transitions under 700 ms except the ambient floats and the marquee; all of it off under reduced motion.
+- Don't drop below 48 px targets or 4.5:1 text contrast.
 
-<!-- Not canonized: the cover's "KHATA · PF withdrawal · pre-checked" rule line above the display title reads as a ledger heading but sits where a kicker would; it is kept on the cover only and is not a pattern for other surfaces. The Next.js dev indicator visible in review captures is tooling, not design. -->
+<!-- Not canonized: the "Features" pill above the section headline is a category kicker kept only on the landing per the user's pinned reference; the Next.js dev indicator in captures is tooling. -->
