@@ -61,7 +61,7 @@ export default async function ClaimPage() {
           <ul>
             {sel.forms.map((f, i) => (
               <li key={f} className="ledger-row">
-              <div className="flex items-start justify-center pt-4 mark-tick">
+              <div className="flex items-start justify-center pt-4 mark mark-tick">
                 <Icon name="check" size={20} strokeWidth={2.5} />
               </div>
               <div className="px-4 py-3.5">
@@ -127,14 +127,14 @@ export default async function ClaimPage() {
             </div>
           ) : null}
           <div className="ledger-row items-center min-h-[2.75rem]">
-            <div className="flex items-center justify-center mark-x">
+            <div className="flex items-center justify-center text-pencil">
               <Icon name="alert" size={16} className={tds.applicable ? "" : "opacity-0"} />
             </div>
             <div className="px-4 py-2 text-[0.9375rem] text-ink-2">
               {t("claim.tds")}
               {tds.applicable ? <span className="text-ink-3"> · {Math.round(tds.rate * 100)}%</span> : null}
             </div>
-            <div className={`pr-4 py-2 t-num text-[0.9375rem] tnum ${tds.applicable ? "mark-x" : "text-ink-3"}`}>{tds.applicable ? `− ${inr(tds.amount)}` : inr(0)}</div>
+            <div className={`pr-4 py-2 t-num text-[0.9375rem] tnum ${tds.applicable ? "text-pencil" : "text-ink-3"}`}>{tds.applicable ? `− ${inr(tds.amount)}` : inr(0)}</div>
           </div>
           {/* Running total: the cloth strip */}
           <div className="cloth grid grid-cols-[3.25rem_1fr_auto] items-center min-h-[3.25rem]">

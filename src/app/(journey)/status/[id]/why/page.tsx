@@ -44,7 +44,7 @@ export default async function WhyPage({ params }: PageProps<"/status/[id]/why">)
       <PageTitle title={t("rejection.title")} sub={t("rejection.sub")} />
       <Sheet ledger>
         <div className="ledger-row">
-          <div className="flex items-start justify-center pt-4 mark-x">
+          <div className="flex items-start justify-center pt-4 mark mark-x">
             <Icon name="x" size={20} strokeWidth={2.5} />
           </div>
           <div className="px-4 py-3.5">

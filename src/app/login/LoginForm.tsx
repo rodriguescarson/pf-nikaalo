@@ -111,7 +111,7 @@ export function LoginForm({ demos }: { demos: Demo[] }) {
               {t("login.uanHelp")}
             </p>
             {error ? (
-              <p id={`${uanId}-err`} role="alert" className="mt-2 text-sm mark-x flex items-center gap-1.5">
+              <p id={`${uanId}-err`} role="alert" className="mt-2 text-sm text-pencil flex items-center gap-1.5">
                 <Icon name="x" size={16} /> {error}
               </p>
             ) : null}
@@ -156,7 +156,7 @@ export function LoginForm({ demos }: { demos: Demo[] }) {
               <p className="mt-1.5 text-sm text-ink-2">{t("login.otpHelp")}</p>
             </fieldset>
             {error ? (
-              <p id={otpErrorId} role="alert" className="mt-2 text-sm mark-x flex items-center gap-1.5">
+              <p id={otpErrorId} role="alert" className="mt-2 text-sm text-pencil flex items-center gap-1.5">
                 <Icon name="x" size={16} /> {error}
               </p>
             ) : null}

@@ -59,7 +59,7 @@ export function Timeline({ status, claimId: _claimId, amount: _amount, last4: _l
 function StationMark({ current, done, rejected }: { current: boolean; done: boolean; rejected: boolean }) {
   if (rejected) {
     return (
-      <span className="mark-x relative inline-flex h-7 w-7 items-center justify-center bg-sheet" aria-hidden="true">
+      <span className="mark mark-x relative inline-flex h-7 w-7 items-center justify-center bg-sheet" aria-hidden="true">
         <svg className="absolute inset-0" viewBox="0 0 28 28" fill="none" aria-hidden="true">
           <circle cx="14" cy="14" r="11.25" stroke="currentColor" strokeWidth="1.75" />
         </svg>

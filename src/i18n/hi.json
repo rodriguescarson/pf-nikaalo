@@ -77,7 +77,72 @@
       }
     },
     "builtFor": "नागरिक के लिए बना, काउंटर के लिए नहीं।",
-    "demoNote": "अगली स्क्रीन पर चार डेमो खातों में से कोई भी इस्तेमाल करें।"
+    "demoNote": "अगली स्क्रीन पर चार डेमो खातों में से कोई भी इस्तेमाल करें।",
+    "hero": {
+      "title1": "आपका PF क्लेम,",
+      "titleAccent": "जाँचा हुआ",
+      "title2": "फ़ाइल करने से पहले।",
+      "lead": "तीन में से एक फ़ाइनल सेटलमेंट क्लेम उन बातों पर रिजेक्ट होता है जो पहले ही दिख सकती थीं। PF निकालो जाँचें करता है, फ़ॉर्म चुनता है, पैसा और टैक्स दिखाता है, और क्लेम को शब्दों में ट्रैक करता है।",
+      "cta": "मेरा क्लेम जाँचें",
+      "ctaSecondary": "कैसे काम करता है",
+      "chips": [
+        "आधार मिलान",
+        "एग्ज़िट डेट",
+        "बैंक KYC",
+        "सही फ़ॉर्म",
+        "TDS और फ़ॉर्म 121",
+        "सीधी भाषा में स्टेटस"
+      ],
+      "cardClaim": "क्लेम फ़ाइल के लिए तैयार",
+      "cardChecks": "13 जाँचें",
+      "cardPassed": "पास",
+      "cardFixed": "1 फ़ाइल से पहले ठीक",
+      "statLabel": "रिजेक्ट हो जाते",
+      "statNote": "प्रोटोटाइप डेमो डेटा",
+      "worksWith": "उन्हीं रिकॉर्ड की जाँच जो EPFO देखता है",
+      "sources": [
+        "EPFO सदस्य रिकॉर्ड",
+        "UIDAI e-KYC",
+        "NPCI बैंक सत्यापन",
+        "नियोक्ता फ़ाइलिंग (ECR)",
+        "क्लेम इतिहास"
+      ],
+      "simNote": "इस प्रोटोटाइप में सब सिम्युलेटेड"
+    },
+    "features": {
+      "title1": "जो भी क्लेम को",
+      "accent1": "रिजेक्ट",
+      "title2": "करवाता है, फ़ाइल दबाने से पहले पकड़ा जाता है, और हर",
+      "accent2": "रुपया",
+      "title3": "समझाया जाता है।",
+      "kicker": "फ़ीचर"
+    },
+    "steps": {
+      "title": "आपका पैसा, तीन आसान चरणों में",
+      "items": [
+        {
+          "title": "अपना खाता खोलें",
+          "body": "डेमो UAN + कोई भी छह अंक। फिर सीधी भाषा में बताएँ क्या चाहिए।"
+        },
+        {
+          "title": "सहायक को जाँचने दें",
+          "body": "EPFO, आधार, NPCI और नियोक्ता की फ़ाइलिंग पर तेरह जाँचें। जो फेल हो, वहीं ठीक करें।"
+        },
+        {
+          "title": "फ़ाइल करें और ट्रैक करें",
+          "body": "सही फ़ॉर्म, टैक्स के बाद की राशि, एक आधार OTP। फिर कौन क्या कर रहा है और कब तक।"
+        }
+      ],
+      "widgetLabel": "आपके बैंक में जमा",
+      "widgetTds": "10% TDS के बाद",
+      "widgetFile": "क्लेम फ़ाइल करें",
+      "widgetTrack": "ट्रैक करें"
+    },
+    "honest": {
+      "title": "डिज़ाइन से ईमानदार",
+      "body": "हर निर्भरता सिम्युलेटेड के रूप में लेबल है, सारा डेटा काल्पनिक है, और 'कैसे काम करता है' पेज बताता है कि असली इंटीग्रेशन क्या होगा।",
+      "cta": "पढ़ें क्या असली है"
+    }
   },
   "login": {
     "title": "अपना खाता खोलें",
@@ -447,20 +512,62 @@
     "todo": "क्या करें",
     "canRefile": "यह ठीक होते ही आप फिर फ़ाइल कर सकते हैं।",
     "cannotRefile": "यह क्लेम दोबारा फ़ाइल नहीं हो सकता।",
-    "NAME_MISMATCH": { "epfo": "Name mismatch with Aadhaar / Member details mismatch", "plain": "EPFO के पास आपका जो नाम है वह आधार वाले नाम जैसा नहीं है। मिडिल नेम छूटना भी गिना जाता है।" },
-    "DOB_MISMATCH": { "epfo": "Date of birth mismatch", "plain": "EPFO रिकॉर्ड की जन्मतिथि आधार से अलग है।" },
-    "DOE_NOT_AVAILABLE": { "epfo": "Date of exit not available", "plain": "आपके नियोक्ता ने EPFO को कभी नहीं बताया कि आपने नौकरी छोड़ी। एग्ज़िट डेट के बिना फ़ाइनल सेटलमेंट नहीं हो सकता।" },
-    "BANK_KYC_NOT_VERIFIED": { "epfo": "KYC incomplete / Bank details not verified", "plain": "रिकॉर्ड वाला बैंक खाता कभी सत्यापित नहीं हुआ, इसलिए EPFO के पास पैसा भेजने की कोई सुरक्षित जगह नहीं।" },
-    "BANK_NAME_DIFFERS": { "epfo": "Bank account name mismatch", "plain": "बैंक खाते का नाम आपके आधार नाम जैसा नहीं है, इसलिए भुगतान जारी नहीं हो सकता।" },
-    "PAN_NOT_VERIFIED": { "epfo": "PAN not verified", "plain": "आपका PAN नहीं है या सत्यापित नहीं हो सका। भुगतान से पहले टैक्स तय होना ज़रूरी है।" },
-    "SERVICE_OVERLAP": { "epfo": "Service overlap detected", "plain": "दो नियोक्ताओं ने दिखाया है कि आप एक ही समय दोनों जगह काम कर रहे थे। जब तक कोई तारीखें ठीक न करे, EPFO रुका रहता है।" },
-    "CLAIM_ALREADY_SETTLED": { "epfo": "Claim already settled", "plain": "EPFO यह क्लेम पहले ही भुगतान कर चुका है। उसी चीज़ का दूसरा क्लेम रिजेक्ट होता है।" },
-    "WRONG_FORM": { "epfo": "Wrong form selected", "plain": "भरा गया फ़ॉर्म उससे मेल नहीं खाता जिसके आप अभी पात्र हैं।" },
-    "UNCLEAR_CHEQUE": { "epfo": "Unclear cheque / passbook image", "plain": "आपके चेक या पासबुक की फ़ोटो पढ़ी नहीं जा सकी।" },
-    "PAYMENT_RETURNED": { "epfo": "Payment settled but money bounced", "plain": "EPFO ने पैसा भेजा, पर बैंक ने लौटा दिया। आमतौर पर खाता बंद, निष्क्रिय या किसी और नाम पर होता है।" },
-    "PENDING_WITH_EMPLOYER": { "epfo": "Pending with employer / Rejected by employer", "plain": "आपके नियोक्ता को कुछ मंज़ूर करना है (KYC, एग्ज़िट डेट या खुद क्लेम) और उसने नहीं किया।" },
-    "EPS_NOT_ELIGIBLE": { "epfo": "EPS not eligible", "plain": "विदड्रॉअल बेनिफ़िट के लिए आपकी पेंशन सेवा बहुत छोटी है।" },
-    "SIGNATURE_DIFFERS": { "epfo": "Signature differs", "plain": "कागज़ी क्लेम पर हस्ताक्षर रिकॉर्ड वाले से मेल नहीं खाया।" }
+    "NAME_MISMATCH": {
+      "epfo": "Name mismatch with Aadhaar / Member details mismatch",
+      "plain": "EPFO के पास आपका जो नाम है वह आधार वाले नाम जैसा नहीं है। मिडिल नेम छूटना भी गिना जाता है।"
+    },
+    "DOB_MISMATCH": {
+      "epfo": "Date of birth mismatch",
+      "plain": "EPFO रिकॉर्ड की जन्मतिथि आधार से अलग है।"
+    },
+    "DOE_NOT_AVAILABLE": {
+      "epfo": "Date of exit not available",
+      "plain": "आपके नियोक्ता ने EPFO को कभी नहीं बताया कि आपने नौकरी छोड़ी। एग्ज़िट डेट के बिना फ़ाइनल सेटलमेंट नहीं हो सकता।"
+    },
+    "BANK_KYC_NOT_VERIFIED": {
+      "epfo": "KYC incomplete / Bank details not verified",
+      "plain": "रिकॉर्ड वाला बैंक खाता कभी सत्यापित नहीं हुआ, इसलिए EPFO के पास पैसा भेजने की कोई सुरक्षित जगह नहीं।"
+    },
+    "BANK_NAME_DIFFERS": {
+      "epfo": "Bank account name mismatch",
+      "plain": "बैंक खाते का नाम आपके आधार नाम जैसा नहीं है, इसलिए भुगतान जारी नहीं हो सकता।"
+    },
+    "PAN_NOT_VERIFIED": {
+      "epfo": "PAN not verified",
+      "plain": "आपका PAN नहीं है या सत्यापित नहीं हो सका। भुगतान से पहले टैक्स तय होना ज़रूरी है।"
+    },
+    "SERVICE_OVERLAP": {
+      "epfo": "Service overlap detected",
+      "plain": "दो नियोक्ताओं ने दिखाया है कि आप एक ही समय दोनों जगह काम कर रहे थे। जब तक कोई तारीखें ठीक न करे, EPFO रुका रहता है।"
+    },
+    "CLAIM_ALREADY_SETTLED": {
+      "epfo": "Claim already settled",
+      "plain": "EPFO यह क्लेम पहले ही भुगतान कर चुका है। उसी चीज़ का दूसरा क्लेम रिजेक्ट होता है।"
+    },
+    "WRONG_FORM": {
+      "epfo": "Wrong form selected",
+      "plain": "भरा गया फ़ॉर्म उससे मेल नहीं खाता जिसके आप अभी पात्र हैं।"
+    },
+    "UNCLEAR_CHEQUE": {
+      "epfo": "Unclear cheque / passbook image",
+      "plain": "आपके चेक या पासबुक की फ़ोटो पढ़ी नहीं जा सकी।"
+    },
+    "PAYMENT_RETURNED": {
+      "epfo": "Payment settled but money bounced",
+      "plain": "EPFO ने पैसा भेजा, पर बैंक ने लौटा दिया। आमतौर पर खाता बंद, निष्क्रिय या किसी और नाम पर होता है।"
+    },
+    "PENDING_WITH_EMPLOYER": {
+      "epfo": "Pending with employer / Rejected by employer",
+      "plain": "आपके नियोक्ता को कुछ मंज़ूर करना है (KYC, एग्ज़िट डेट या खुद क्लेम) और उसने नहीं किया।"
+    },
+    "EPS_NOT_ELIGIBLE": {
+      "epfo": "EPS not eligible",
+      "plain": "विदड्रॉअल बेनिफ़िट के लिए आपकी पेंशन सेवा बहुत छोटी है।"
+    },
+    "SIGNATURE_DIFFERS": {
+      "epfo": "Signature differs",
+      "plain": "कागज़ी क्लेम पर हस्ताक्षर रिकॉर्ड वाले से मेल नहीं खाया।"
+    }
   },
   "passbook": {
     "title": "पासबुक",
@@ -514,12 +621,36 @@
     ],
     "mockTitle": "क्या सिम्युलेटेड है, और असल में क्या होगा",
     "mock": [
-      { "name": "EPFO सदस्य रिकॉर्ड", "sim": "कोड में चार काल्पनिक सदस्य।", "real": "स्वीकृत API से EPFO सदस्य डेटाबेस (UAN, KYC, सेवा इतिहास)।" },
-      { "name": "UIDAI e-KYC", "sim": "देरी के बाद सीड किया आधार रिकॉर्ड लौटाता है।", "real": "AUA/KUA के ज़रिए आधार e-KYC, सहमति और सदस्य के OTP के साथ।" },
-      { "name": "NPCI बैंक सत्यापन", "sim": "कोड में खाते का नाम मिलाता है।", "real": "NPCI खाता-नाम सत्यापन (पेनी-ड्रॉप या नेम-मैच API)।" },
-      { "name": "नियोक्ता फ़ाइलिंग", "sim": "'नियोक्ता से कहें' एक अनुरोध दर्ज करता है।", "real": "रिमाइंडर और EPFiGMS के ज़रिए एस्केलेशन के साथ नियोक्ता ECR वर्कफ़्लो।" },
-      { "name": "क्लेम स्टेटस", "sim": "फ़ाइलिंग तारीख से गणना किया शेड्यूल; डेमो घड़ी समय बढ़ाती है।", "real": "EPFO क्लेम इवेंट स्ट्रीम (प्राप्त, प्रक्रिया, मंज़ूर, NEFT) नोटिफ़िकेशन के रूप में।" },
-      { "name": "OTP और हस्ताक्षर", "sim": "कोई भी छह अंक।", "real": "UIDAI से आधार OTP; सहमति और ऑडिट लॉग।" }
+      {
+        "name": "EPFO सदस्य रिकॉर्ड",
+        "sim": "कोड में चार काल्पनिक सदस्य।",
+        "real": "स्वीकृत API से EPFO सदस्य डेटाबेस (UAN, KYC, सेवा इतिहास)।"
+      },
+      {
+        "name": "UIDAI e-KYC",
+        "sim": "देरी के बाद सीड किया आधार रिकॉर्ड लौटाता है।",
+        "real": "AUA/KUA के ज़रिए आधार e-KYC, सहमति और सदस्य के OTP के साथ।"
+      },
+      {
+        "name": "NPCI बैंक सत्यापन",
+        "sim": "कोड में खाते का नाम मिलाता है।",
+        "real": "NPCI खाता-नाम सत्यापन (पेनी-ड्रॉप या नेम-मैच API)।"
+      },
+      {
+        "name": "नियोक्ता फ़ाइलिंग",
+        "sim": "'नियोक्ता से कहें' एक अनुरोध दर्ज करता है।",
+        "real": "रिमाइंडर और EPFiGMS के ज़रिए एस्केलेशन के साथ नियोक्ता ECR वर्कफ़्लो।"
+      },
+      {
+        "name": "क्लेम स्टेटस",
+        "sim": "फ़ाइलिंग तारीख से गणना किया शेड्यूल; डेमो घड़ी समय बढ़ाती है।",
+        "real": "EPFO क्लेम इवेंट स्ट्रीम (प्राप्त, प्रक्रिया, मंज़ूर, NEFT) नोटिफ़िकेशन के रूप में।"
+      },
+      {
+        "name": "OTP और हस्ताक्षर",
+        "sim": "कोई भी छह अंक।",
+        "real": "UIDAI से आधार OTP; सहमति और ऑडिट लॉग।"
+      }
     ],
     "scaleTitle": "असल में चलाने के लिए क्या चाहिए",
     "scale": [
@@ -533,13 +664,34 @@
     "codexBody": "इस प्रोजेक्ट में Codex (OpenAI) एक बिल्ड टूल था, जिसे स्क्रिप्ट से गैर-संवादात्मक रूप से चलाया गया। हर सत्र एक अलग कमिट है जिसमें Codex सह-लेखक पंक्ति और रिपॉज़िटरी के CODEX_LOG.md में प्रविष्टि है, इसलिए योगदान git इतिहास में सत्यापित किया जा सकता है।",
     "sourcesTitle": "नियम और स्रोत",
     "sources": [
-      { "text": "फ़ॉर्म 19 / 10C / 31 का अर्थ, दो महीने की प्रतीक्षा, पूर्व-शर्तें", "url": "https://www.epfindia.gov.in/site_en/WhichClaimForm.php" },
-      { "text": "स्व-सेवा एग्ज़िट डेट और प्रोफ़ाइल सुधार (अक्टूबर 2017 के बाद के UAN)", "url": "https://www.newsonair.gov.in/epfo-simplifies-online-process-of-updating-member-profiles" },
-      { "text": "धारा 192A के तहत TDS: पाँच साल से कम पर PAN के साथ 10%, बिना PAN 20%", "url": "https://taxgarden.in/blog/epf-pf-withdrawal-tax-rules-india-ay-2026-27" },
-      { "text": "1 अप्रैल 2026 से फ़ॉर्म 121 ने फ़ॉर्म 15G/15H की जगह ली", "url": "https://www.business-standard.com/finance/personal-finance/epfo-replaces-form-15g-15h-with-121-what-it-means-for-withdrawing-money-126042900885_1.html" },
-      { "text": "₹5 लाख तक 72 घंटे में ऑटो-सेटलमेंट; 20 दिन की बाहरी सीमा", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2139291" },
-      { "text": "रिजेक्शन दर: लगभग 26% क्लेम, तीन में से एक फ़ाइनल सेटलमेंट", "url": "https://insights.dataful.in/articles/epfo-claim-rejection-rate-at-26-in-2023-24" },
-      { "text": "रिजेक्शन के कारण, EPFO के शब्दों में", "url": "https://kustodian.life/resources/epf-claim-rejected-reasons-guide" }
+      {
+        "text": "फ़ॉर्म 19 / 10C / 31 का अर्थ, दो महीने की प्रतीक्षा, पूर्व-शर्तें",
+        "url": "https://www.epfindia.gov.in/site_en/WhichClaimForm.php"
+      },
+      {
+        "text": "स्व-सेवा एग्ज़िट डेट और प्रोफ़ाइल सुधार (अक्टूबर 2017 के बाद के UAN)",
+        "url": "https://www.newsonair.gov.in/epfo-simplifies-online-process-of-updating-member-profiles"
+      },
+      {
+        "text": "धारा 192A के तहत TDS: पाँच साल से कम पर PAN के साथ 10%, बिना PAN 20%",
+        "url": "https://taxgarden.in/blog/epf-pf-withdrawal-tax-rules-india-ay-2026-27"
+      },
+      {
+        "text": "1 अप्रैल 2026 से फ़ॉर्म 121 ने फ़ॉर्म 15G/15H की जगह ली",
+        "url": "https://www.business-standard.com/finance/personal-finance/epfo-replaces-form-15g-15h-with-121-what-it-means-for-withdrawing-money-126042900885_1.html"
+      },
+      {
+        "text": "₹5 लाख तक 72 घंटे में ऑटो-सेटलमेंट; 20 दिन की बाहरी सीमा",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2139291"
+      },
+      {
+        "text": "रिजेक्शन दर: लगभग 26% क्लेम, तीन में से एक फ़ाइनल सेटलमेंट",
+        "url": "https://insights.dataful.in/articles/epfo-claim-rejection-rate-at-26-in-2023-24"
+      },
+      {
+        "text": "रिजेक्शन के कारण, EPFO के शब्दों में",
+        "url": "https://kustodian.life/resources/epf-claim-rejected-reasons-guide"
+      }
     ],
     "limitsTitle": "सीमाएँ",
     "limits": "EPS टेबल D फ़ैक्टर और बिना-PAN दर अनुमानित हैं। दिखाए गए सुधार अगस्त 2026 तक के पोर्टल के अपने चरण हैं; EPFO इन्हें बदलता रहता है। कोई सरकारी लोगो, डेटा या सिस्टम इस्तेमाल नहीं हुआ।",

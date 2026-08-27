@@ -69,7 +69,7 @@ export function ReviewForm({ uan, intent, form121 }: { uan: string; intent: Inte
           </div>
         </div>
         {error ? (
-          <p id={`${id}-err`} role="alert" className="mt-3 text-sm mark-x flex items-center gap-1.5">
+          <p id={`${id}-err`} role="alert" className="mt-3 text-sm text-pencil flex items-center gap-1.5">
             <Icon name="x" size={16} /> {error}
           </p>
         ) : null}

@@ -67,11 +67,11 @@ export function ClaimsList({ rows }: { rows: ClaimRow[] }) {
                 <Link href={`/status/${r.id}`} className="col-span-3 grid grid-cols-[3.25rem_1fr_auto] items-center">
                   <div className="flex items-center justify-center">
                 {r.bucket === "rejected" ? (
-                  <span className="mark-x">
+                  <span className="mark mark-x">
                     <Icon name="x" size={18} strokeWidth={2.5} />
                   </span>
                 ) : r.bucket === "settled" ? (
-                  <span className="mark-tick">
+                  <span className="mark mark-tick">
                     <Icon name="check" size={18} strokeWidth={2.5} />
                   </span>
                 ) : (

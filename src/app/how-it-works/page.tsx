@@ -25,7 +25,7 @@ export default async function HowItWorksPage() {
         <ul>
           {real.map((line, i) => (
             <li key={i} className="ledger-row">
-            <div className="flex items-start justify-center pt-3.5 mark-tick">
+            <div className="flex items-start justify-center pt-3.5 mark mark-tick">
               <Icon name="check" size={18} strokeWidth={2.5} />
             </div>
             <p className="px-4 py-3 text-[0.9375rem] text-ink leading-relaxed">{line}</p>

@@ -77,7 +77,72 @@
       }
     },
     "builtFor": "Built for the citizen, not the counter.",
-    "demoNote": "Use any of the four demo accounts on the next screen."
+    "demoNote": "Use any of the four demo accounts on the next screen.",
+    "hero": {
+      "title1": "Your PF claim,",
+      "titleAccent": "checked",
+      "title2": "before you file it.",
+      "lead": "One in three final-settlement claims gets rejected for things you could have seen first. PF Nikaalo runs the checks, picks the form, shows the money and tax, and tracks the claim in words.",
+      "cta": "Check my claim",
+      "ctaSecondary": "See how it works",
+      "chips": [
+        "Aadhaar match",
+        "Date of exit",
+        "Bank KYC",
+        "Right form",
+        "TDS & Form 121",
+        "Plain-language status"
+      ],
+      "cardClaim": "Claim ready to file",
+      "cardChecks": "13 checks",
+      "cardPassed": "passed",
+      "cardFixed": "1 fixed before filing",
+      "statLabel": "would have been rejected",
+      "statNote": "Prototype demo data",
+      "worksWith": "Checks the same records EPFO uses",
+      "sources": [
+        "EPFO member record",
+        "UIDAI e-KYC",
+        "NPCI bank validation",
+        "Employer filings (ECR)",
+        "Claim history"
+      ],
+      "simNote": "All simulated in this prototype"
+    },
+    "features": {
+      "title1": "Everything that gets a claim",
+      "accent1": "rejected",
+      "title2": "caught before you press file, and every",
+      "accent2": "rupee",
+      "title3": "explained.",
+      "kicker": "Features"
+    },
+    "steps": {
+      "title": "Your money, in three easy steps",
+      "items": [
+        {
+          "title": "Open your khata",
+          "body": "Demo UAN + any six-digit code. Then say what you need in plain words."
+        },
+        {
+          "title": "Let Sahayak check",
+          "body": "Thirteen checks against EPFO, Aadhaar, NPCI and your employer's filings. Fix what fails, right there."
+        },
+        {
+          "title": "File and track",
+          "body": "The right form, the amount after tax, one Aadhaar OTP. Then who is acting and by when."
+        }
+      ],
+      "widgetLabel": "Credited to your bank",
+      "widgetTds": "after 10% TDS",
+      "widgetFile": "File claim",
+      "widgetTrack": "Track"
+    },
+    "honest": {
+      "title": "Honest by design",
+      "body": "Every dependency is labelled as simulated, all data is synthetic, and the how-it-works page says what the real integration is.",
+      "cta": "Read what is real"
+    }
   },
   "login": {
     "title": "Open your khata",
@@ -447,20 +512,62 @@
     "todo": "What to do",
     "canRefile": "You can file again once this is fixed.",
     "cannotRefile": "This claim cannot be filed again.",
-    "NAME_MISMATCH": { "epfo": "Name mismatch with Aadhaar / Member details mismatch", "plain": "The name EPFO holds for you is not the same as the one on your Aadhaar. Even a missing middle name counts." },
-    "DOB_MISMATCH": { "epfo": "Date of birth mismatch", "plain": "The date of birth on your EPFO record differs from Aadhaar." },
-    "DOE_NOT_AVAILABLE": { "epfo": "Date of exit not available", "plain": "Your employer never told EPFO that you left. Without an exit date, a final settlement cannot be processed." },
-    "BANK_KYC_NOT_VERIFIED": { "epfo": "KYC incomplete / Bank details not verified", "plain": "The bank account on your record was never verified, so EPFO has nowhere safe to send the money." },
-    "BANK_NAME_DIFFERS": { "epfo": "Bank account name mismatch", "plain": "The name on your bank account is not the same as your Aadhaar name, so the payment cannot be released." },
-    "PAN_NOT_VERIFIED": { "epfo": "PAN not verified", "plain": "Your PAN is missing or could not be verified. Tax has to be worked out before payment." },
-    "SERVICE_OVERLAP": { "epfo": "Service overlap detected", "plain": "Two employers report you working for them at the same time. EPFO waits until one of them corrects the dates." },
-    "CLAIM_ALREADY_SETTLED": { "epfo": "Claim already settled", "plain": "EPFO has already paid this claim. A second one for the same thing is rejected." },
-    "WRONG_FORM": { "epfo": "Wrong form selected", "plain": "The form filed does not match what you are eligible for right now." },
-    "UNCLEAR_CHEQUE": { "epfo": "Unclear cheque / passbook image", "plain": "The photo of your cheque or passbook could not be read." },
-    "PAYMENT_RETURNED": { "epfo": "Payment settled but money bounced", "plain": "EPFO sent the money, but your bank returned it. Usually the account is closed, inactive, or in another name." },
-    "PENDING_WITH_EMPLOYER": { "epfo": "Pending with employer / Rejected by employer", "plain": "Your employer has to approve something (KYC, exit date or the claim itself) and has not." },
-    "EPS_NOT_ELIGIBLE": { "epfo": "EPS not eligible", "plain": "Your pension service is too short for a withdrawal benefit." },
-    "SIGNATURE_DIFFERS": { "epfo": "Signature differs", "plain": "On a paper claim, the signature did not match the one on file." }
+    "NAME_MISMATCH": {
+      "epfo": "Name mismatch with Aadhaar / Member details mismatch",
+      "plain": "The name EPFO holds for you is not the same as the one on your Aadhaar. Even a missing middle name counts."
+    },
+    "DOB_MISMATCH": {
+      "epfo": "Date of birth mismatch",
+      "plain": "The date of birth on your EPFO record differs from Aadhaar."
+    },
+    "DOE_NOT_AVAILABLE": {
+      "epfo": "Date of exit not available",
+      "plain": "Your employer never told EPFO that you left. Without an exit date, a final settlement cannot be processed."
+    },
+    "BANK_KYC_NOT_VERIFIED": {
+      "epfo": "KYC incomplete / Bank details not verified",
+      "plain": "The bank account on your record was never verified, so EPFO has nowhere safe to send the money."
+    },
+    "BANK_NAME_DIFFERS": {
+      "epfo": "Bank account name mismatch",
+      "plain": "The name on your bank account is not the same as your Aadhaar name, so the payment cannot be released."
+    },
+    "PAN_NOT_VERIFIED": {
+      "epfo": "PAN not verified",
+      "plain": "Your PAN is missing or could not be verified. Tax has to be worked out before payment."
+    },
+    "SERVICE_OVERLAP": {
+      "epfo": "Service overlap detected",
+      "plain": "Two employers report you working for them at the same time. EPFO waits until one of them corrects the dates."
+    },
+    "CLAIM_ALREADY_SETTLED": {
+      "epfo": "Claim already settled",
+      "plain": "EPFO has already paid this claim. A second one for the same thing is rejected."
+    },
+    "WRONG_FORM": {
+      "epfo": "Wrong form selected",
+      "plain": "The form filed does not match what you are eligible for right now."
+    },
+    "UNCLEAR_CHEQUE": {
+      "epfo": "Unclear cheque / passbook image",
+      "plain": "The photo of your cheque or passbook could not be read."
+    },
+    "PAYMENT_RETURNED": {
+      "epfo": "Payment settled but money bounced",
+      "plain": "EPFO sent the money, but your bank returned it. Usually the account is closed, inactive, or in another name."
+    },
+    "PENDING_WITH_EMPLOYER": {
+      "epfo": "Pending with employer / Rejected by employer",
+      "plain": "Your employer has to approve something (KYC, exit date or the claim itself) and has not."
+    },
+    "EPS_NOT_ELIGIBLE": {
+      "epfo": "EPS not eligible",
+      "plain": "Your pension service is too short for a withdrawal benefit."
+    },
+    "SIGNATURE_DIFFERS": {
+      "epfo": "Signature differs",
+      "plain": "On a paper claim, the signature did not match the one on file."
+    }
   },
   "passbook": {
     "title": "Passbook",
@@ -514,12 +621,36 @@
     ],
     "mockTitle": "What is simulated, and what the real thing is",
     "mock": [
-      { "name": "EPFO member record", "sim": "Four synthetic members in code.", "real": "EPFO member database (UAN, KYC, service history) via an approved API." },
-      { "name": "UIDAI e-KYC", "sim": "Returns the seeded Aadhaar record after a delay.", "real": "Aadhaar e-KYC through an AUA/KUA with consent capture and the member's OTP." },
-      { "name": "NPCI bank validation", "sim": "Compares the account name in code.", "real": "NPCI account-name verification (penny-drop or name-match API)." },
-      { "name": "Employer filings", "sim": "'Ask my employer' records a request.", "real": "Employer ECR workflow with reminders and escalation through EPFiGMS." },
-      { "name": "Claim status", "sim": "A schedule computed from the filing date; the demo clock moves time.", "real": "EPFO claim event stream (received, processed, approved, NEFT) pushed as notifications." },
-      { "name": "OTP and signing", "sim": "Any six digits.", "real": "Aadhaar OTP through UIDAI; consent and audit logged." }
+      {
+        "name": "EPFO member record",
+        "sim": "Four synthetic members in code.",
+        "real": "EPFO member database (UAN, KYC, service history) via an approved API."
+      },
+      {
+        "name": "UIDAI e-KYC",
+        "sim": "Returns the seeded Aadhaar record after a delay.",
+        "real": "Aadhaar e-KYC through an AUA/KUA with consent capture and the member's OTP."
+      },
+      {
+        "name": "NPCI bank validation",
+        "sim": "Compares the account name in code.",
+        "real": "NPCI account-name verification (penny-drop or name-match API)."
+      },
+      {
+        "name": "Employer filings",
+        "sim": "'Ask my employer' records a request.",
+        "real": "Employer ECR workflow with reminders and escalation through EPFiGMS."
+      },
+      {
+        "name": "Claim status",
+        "sim": "A schedule computed from the filing date; the demo clock moves time.",
+        "real": "EPFO claim event stream (received, processed, approved, NEFT) pushed as notifications."
+      },
+      {
+        "name": "OTP and signing",
+        "sim": "Any six digits.",
+        "real": "Aadhaar OTP through UIDAI; consent and audit logged."
+      }
     ],
     "scaleTitle": "What it would take to run this for real",
     "scale": [
@@ -533,13 +664,34 @@
     "codexBody": "Codex (OpenAI) was a build tool on this project, driven non-interactively from scripts. Each session is a separate commit with a Codex co-author line and an entry in CODEX_LOG.md in the repository, so the contribution is verifiable in git history.",
     "sourcesTitle": "Rules and sources",
     "sources": [
-      { "text": "Form 19 / 10C / 31 semantics, two-month wait, prerequisites", "url": "https://www.epfindia.gov.in/site_en/WhichClaimForm.php" },
-      { "text": "Self-service date of exit and profile corrections (UANs after Oct 2017)", "url": "https://www.newsonair.gov.in/epfo-simplifies-online-process-of-updating-member-profiles" },
-      { "text": "TDS under section 192A: 10% with PAN below five years, 20% without", "url": "https://taxgarden.in/blog/epf-pf-withdrawal-tax-rules-india-ay-2026-27" },
-      { "text": "Form 121 replaces Forms 15G/15H from 1 April 2026", "url": "https://www.business-standard.com/finance/personal-finance/epfo-replaces-form-15g-15h-with-121-what-it-means-for-withdrawing-money-126042900885_1.html" },
-      { "text": "Auto-settlement within 72 hours up to ₹5 lakh; 20-day outer limit", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2139291" },
-      { "text": "Rejection rates: about 26% of claims, one in three final settlements", "url": "https://insights.dataful.in/articles/epfo-claim-rejection-rate-at-26-in-2023-24" },
-      { "text": "Rejection reasons as EPFO phrases them", "url": "https://kustodian.life/resources/epf-claim-rejected-reasons-guide" }
+      {
+        "text": "Form 19 / 10C / 31 semantics, two-month wait, prerequisites",
+        "url": "https://www.epfindia.gov.in/site_en/WhichClaimForm.php"
+      },
+      {
+        "text": "Self-service date of exit and profile corrections (UANs after Oct 2017)",
+        "url": "https://www.newsonair.gov.in/epfo-simplifies-online-process-of-updating-member-profiles"
+      },
+      {
+        "text": "TDS under section 192A: 10% with PAN below five years, 20% without",
+        "url": "https://taxgarden.in/blog/epf-pf-withdrawal-tax-rules-india-ay-2026-27"
+      },
+      {
+        "text": "Form 121 replaces Forms 15G/15H from 1 April 2026",
+        "url": "https://www.business-standard.com/finance/personal-finance/epfo-replaces-form-15g-15h-with-121-what-it-means-for-withdrawing-money-126042900885_1.html"
+      },
+      {
+        "text": "Auto-settlement within 72 hours up to ₹5 lakh; 20-day outer limit",
+        "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2139291"
+      },
+      {
+        "text": "Rejection rates: about 26% of claims, one in three final settlements",
+        "url": "https://insights.dataful.in/articles/epfo-claim-rejection-rate-at-26-in-2023-24"
+      },
+      {
+        "text": "Rejection reasons as EPFO phrases them",
+        "url": "https://kustodian.life/resources/epf-claim-rejected-reasons-guide"
+      }
     ],
     "limitsTitle": "Limits",
     "limits": "EPS Table D factors and the no-PAN rate are indicative. The fixes shown are the portal's own steps as of August 2026; EPFO changes them. No government logo, data or system is used.",

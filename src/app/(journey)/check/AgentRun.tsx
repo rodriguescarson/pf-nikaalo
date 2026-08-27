@@ -144,7 +144,7 @@ export function AgentRun({ uan, intent, memberName, latestEmployer }: { uan: str
       <div className="mb-3" aria-live="polite" aria-atomic="true">
         {preflight && allRevealed ? (
           <div className="write-in">
-            <h2 className={`t-head text-xl ${preflight.canSubmit ? "text-ink" : "mark-x"}`}>{resultTitle}</h2>
+            <h2 className={`t-head text-xl ${preflight.canSubmit ? "text-ink" : "text-pencil"}`}>{resultTitle}</h2>
             <div className="mt-1 flex items-center gap-2 text-sm text-ink-2">
               <span>{t("check.risk.label")}:</span>
               <RiskMeter level={preflight.rejectionRisk} label={t(`check.risk.${preflight.rejectionRisk}`)} />
@@ -251,7 +251,7 @@ export function AgentRun({ uan, intent, memberName, latestEmployer }: { uan: str
       </ol>
 
       {error ? (
-        <p role="alert" className="mt-3 text-sm mark-x flex items-center gap-1.5">
+        <p role="alert" className="mt-3 text-sm text-pencil flex items-center gap-1.5">
           <Icon name="x" size={16} /> {error}
         </p>
       ) : null}
@@ -272,18 +272,18 @@ export function AgentRun({ uan, intent, memberName, latestEmployer }: { uan: str
 function Mark({ status }: { status: CheckResult["status"] }) {
   if (status === "pass")
     return (
-      <span className="mark-tick">
+      <span className="mark mark-tick">
         <Icon name="check" size={20} strokeWidth={2.5} />
       </span>
     );
   if (status === "warn")
     return (
-      <span className="mark-note">
+      <span className="mark mark-note">
         <Icon name="alert" size={20} />
       </span>
     );
   return (
-    <span className="mark-x relative inline-flex h-7 w-7 items-center justify-center">
+    <span className="mark mark-x relative inline-flex h-7 w-7 items-center justify-center">
       <svg className="absolute inset-0" viewBox="0 0 28 28" fill="none" aria-hidden="true">
         <path className="circle-in" d="M14 2.5c6.4-.6 11.6 4.6 11.4 11.2C25.2 20.6 20 25.6 13.6 25.4 7.4 25.2 2.4 20 2.6 13.6 2.8 8 7.2 3.4 12.6 2.8" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
       </svg>

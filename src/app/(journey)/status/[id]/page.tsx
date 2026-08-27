@@ -47,7 +47,7 @@ export default async function StatusPage({ params }: PageProps<"/status/[id]">) 
       {rejected && status.rejection ? (
         <Sheet className="p-4 mb-5 border-pencil/40 bg-pencil-fill/40">
           <div className="flex items-start gap-3">
-            <span className="mark-x mt-0.5">
+            <span className="mark mark-x mt-0.5">
               <Icon name="x" size={20} strokeWidth={2.5} />
             </span>
             <div className="flex-1">

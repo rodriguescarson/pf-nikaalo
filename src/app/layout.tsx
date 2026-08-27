@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Anek_Devanagari } from "next/font/google";
+import { Anek_Devanagari, Bricolage_Grotesque, Manrope } from "next/font/google";
 import "./globals.css";
 import { getLang, getUan } from "@/lib/session";
 import { LocaleProvider } from "@/i18n/useT";
@@ -14,6 +14,18 @@ const anek = Anek_Devanagari({
   weight: ["500", "700"],
   display: "swap",
 });
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+});
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: { default: "PF Nikaalo — reject-proof your PF claim", template: "%s · PF Nikaalo" },
@@ -24,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#8e1a21",
+  themeColor: "#b6f036",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -35,8 +47,8 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
   const uan = await getUan();
   const t = makeT(lang);
   return (
-    <html lang={lang} className={`${anek.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-paper text-ink">
+    <html lang={lang} className={`${anek.variable} ${bricolage.variable} ${manrope.variable} h-full`}>
+      <body className="min-h-full flex flex-col text-ink">
         {/*
           THESIS: A PF claim is a ledger entry the shopkeeper checks before he writes it. PF Nikaalo refuses
           to file what will bounce and explains every line; it refuses the portal's accept-anything form.

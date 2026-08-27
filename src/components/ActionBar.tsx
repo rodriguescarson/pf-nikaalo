@@ -1,14 +1,12 @@
 import type { ReactNode } from "react";
 
-/** The cloth spine at the bottom: the one primary action, always reachable with a thumb. */
+/** Floating glass action bar: one lime primary action, always under the thumb. */
 export function ActionBar({ children, note }: { children: ReactNode; note?: ReactNode }) {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 no-print" style={{ paddingBottom: "env(safe-area-inset-bottom)" }}>
-      <div className="cloth shadow-cloth">
-        <div className="mx-auto w-full max-w-[34rem] px-4 py-3 flex flex-col gap-2">
-          {note ? <div className="text-sm text-white/85 leading-snug">{note}</div> : null}
-          <div className="flex items-center gap-3">{children}</div>
-        </div>
+    <div className="fixed inset-x-0 bottom-0 z-40 no-print px-3 pb-3" style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}>
+      <div className="mx-auto w-full max-w-[34rem] glass rounded-[var(--radius-cloth)] px-3 py-3 flex flex-col gap-2">
+        {note ? <div className="text-sm text-ink-2 leading-snug px-1">{note}</div> : null}
+        <div className="flex items-center gap-3">{children}</div>
       </div>
     </div>
   );
@@ -22,7 +20,7 @@ export function PrimaryButton({
   return (
     <button
       type="button"
-      className={`tap flex-1 inline-flex items-center justify-center gap-2 rounded-[var(--radius-cloth)] bg-paper text-cloth-deep px-4 py-3 t-label text-base hover:bg-white disabled:opacity-50 disabled:hover:bg-paper transition-colors ${className}`}
+      className={`btn-lime tap flex-1 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 t-label text-[0.9375rem] disabled:opacity-50 disabled:shadow-none disabled:hover:translate-y-0 ${className}`}
       {...rest}
     >
       {children}
@@ -38,7 +36,7 @@ export function SecondaryButton({
   return (
     <button
       type="button"
-      className={`tap inline-flex items-center justify-center gap-2 rounded-[var(--radius-cloth)] border border-white/40 text-white px-4 py-3 t-label text-base hover:bg-white/10 disabled:opacity-50 transition-colors ${className}`}
+      className={`tap inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-white text-ink px-4 py-3 t-label text-[0.9375rem] hover:bg-canvas disabled:opacity-50 transition-colors ${className}`}
       {...rest}
     >
       {children}
