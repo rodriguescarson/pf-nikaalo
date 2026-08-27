@@ -195,7 +195,7 @@ export function PassbookInsights({ d }: { d: InsightsData }) {
       {/* Interest + projection */}
       <div className="grid gap-4 sm:grid-cols-2">
         <ChartCard title={t("insights.interestTitle")} sub={t("insights.interestSub")} labels={tableLabels}>
-          <BarChart groups={d.interestByYear.map((y) => ({ label: y.year, values: { interest: y.amount } }))} series={[{ key: "interest", label: legendLabel.interest, color: SERIES_COLOR.interest }]} formatValue={(n) => inr(n)} ariaLabel={t("insights.interestTitle")} height={160} />
+          <BarChart groups={d.interestByYear.map((y) => ({ label: y.year, values: { interest: y.amount } }))} series={[{ key: "interest", label: legendLabel.interest, color: SERIES_COLOR.interest }]} formatValue={(n) => inr(n)} ariaLabel={t("insights.interestTitle")} height={170} viewWidth={340} />
         </ChartCard>
         <Sheet className="p-4 sm:p-5">
           <h3 className="t-label text-ink">{t("insights.projectionTitle")}</h3>

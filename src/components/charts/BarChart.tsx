@@ -5,13 +5,13 @@ import { useId, useState } from "react";
 type Series = { key: string; label: string; color: string };
 type Group = { label: string; values: Record<string, number> };
 
-const W = 640;
 const PAD = { top: 22, right: 8, bottom: 30, left: 8 };
 const MAX_BAR = 24;
 const GAP = 2;
 
 /** Grouped or stacked columns: ≤ 24 px bars, 2 px gaps, rounded data-ends, one direct label per group, hover tooltip. */
-export function BarChart({ groups, series, stacked = false, formatValue, ariaLabel, height = 200 }: { groups: Group[]; series: Series[]; stacked?: boolean; formatValue: (n: number) => string; ariaLabel: string; height?: number }) {
+export function BarChart({ groups, series, stacked = false, formatValue, ariaLabel, height = 200, viewWidth = 640 }: { groups: Group[]; series: Series[]; stacked?: boolean; formatValue: (n: number) => string; ariaLabel: string; height?: number; viewWidth?: number }) {
+  const W = viewWidth;
   const id = useId();
   const [hover, setHover] = useState<{ g: number; s: number } | null>(null);
   const H = height;

@@ -4,7 +4,6 @@ import { useId, useMemo, useRef, useState } from "react";
 
 type Point = { x: string; y: number };
 
-const W = 640;
 const PAD = { top: 16, right: 20, bottom: 28, left: 8 };
 
 function niceTicks(max: number, n = 4): number[] {
@@ -26,6 +25,7 @@ export function AreaChart({
   height = 220,
   ariaLabel,
   markers = [],
+  viewWidth = 640,
 }: {
   data: Point[];
   formatY: (n: number) => string;
@@ -34,7 +34,9 @@ export function AreaChart({
   height?: number;
   ariaLabel: string;
   markers?: { x: string; label: string }[];
+  viewWidth?: number;
 }) {
+  const W = viewWidth;
   const id = useId();
   const svgRef = useRef<SVGSVGElement | null>(null);
   const [hover, setHover] = useState<number | null>(null);

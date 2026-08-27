@@ -2,7 +2,7 @@
 
 import { useId, useMemo, useState } from "react";
 
-const DEFAULT_RAMP = ["var(--color-seq-1)", "var(--color-seq-2)", "var(--color-seq-3)", "var(--color-seq-4)", "var(--color-seq-5)"];
+const DEFAULT_RAMP = ["var(--color-seq-2)", "var(--color-seq-3)", "var(--color-seq-4)", "var(--color-seq-5)"];
 
 /** Rows × columns of cells on a one-hue sequential ramp (5 quantile steps); empty cells are outlined, not filled. */
 export function Heatmap({ rows, cols, cells, formatValue, ariaLabel, ramp = DEFAULT_RAMP }: { rows: string[]; cols: string[]; cells: Record<string, number | null>; formatValue: (n: number) => string; ariaLabel: string; ramp?: string[] }) {
@@ -11,7 +11,7 @@ export function Heatmap({ rows, cols, cells, formatValue, ariaLabel, ramp = DEFA
   const thresholds = useMemo(() => {
     const vals = Object.values(cells).filter((v): v is number => typeof v === "number" && v > 0).sort((a, b) => a - b);
     if (vals.length === 0) return [];
-    return [0.2, 0.4, 0.6, 0.8].map((q) => vals[Math.min(vals.length - 1, Math.floor(q * vals.length))]);
+    return [0.25, 0.5, 0.75].map((q) => vals[Math.min(vals.length - 1, Math.floor(q * vals.length))]);
   }, [cells]);
   const step = (v: number) => thresholds.filter((t) => v > t).length;
 

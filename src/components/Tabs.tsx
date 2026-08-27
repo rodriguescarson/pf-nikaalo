@@ -73,7 +73,7 @@ export function Tabs({
               tabIndex={on ? 0 : -1}
               onClick={() => select(t.id)}
               onKeyDown={(e) => onKey(e, i)}
-              className={`tap shrink-0 inline-flex items-center gap-1.5 rounded-full px-4 t-label whitespace-nowrap transition-colors ${on ? "bg-ink text-canvas" : "text-ink-2 hover:bg-ink/5"}`}
+              className={`tap shrink-0 inline-flex items-center gap-1.5 rounded-full px-3 sm:px-4 t-label whitespace-nowrap transition-colors ${on ? "bg-ink text-canvas" : "text-ink-2 hover:bg-ink/5"}`}
             >
               {t.icon}
               {t.label}
