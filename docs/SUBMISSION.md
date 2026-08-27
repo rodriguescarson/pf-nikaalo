@@ -32,6 +32,9 @@ Open *How to fix it* for a beat, then tap **Fix it now** → the old line is str
 **0:40–0:52 · claim**
 "We picked Form 19 and explained why. Here's the money as a ledger — his share, the employer's, interest, tax at 10% under 192A, and what lands in the bank. If his income is below the limit, Form 121 removes the tax." Toggle it on, the TDS line goes to zero, toggle back.
 
+**0:50–0:58 · passbook insights (optional 6-second beat)**
+Open Passbook → Insights: "And your khata is not a status code either: contribution streak, how the balance grew, what each employer paid, month by month." Scroll one screen, then continue.
+
 **0:52–1:00 · review → file → status**
 Tick the undertaking, six digits, File. Timeline appears. Press **+1 day** twice: Under process → Approved.
 "Who is acting, what happens next, by when — and the SMS EPFO would send. Not a status code." Flip to Hindi for two seconds.
