@@ -28,6 +28,18 @@
   --color-ochre: #9a5d00;
   --color-ochre-fill: #fff3d6;
   --color-focus: #2f5bea;
+  /* charts: categorical order validated with the dataviz validator (light, #fff surface) */
+  --color-chart-1: #1f7a3e;
+  --color-chart-2: #94c83d;
+  --color-chart-3: #c47a00;
+  --color-chart-4: #5b5fd6;
+  --color-chart-muted: #c9cfc5;
+  /* sequential green ramp (heatmap), light → dark */
+  --color-seq-1: #e3f5e8;
+  --color-seq-2: #b7e3c5;
+  --color-seq-3: #7fcb98;
+  --color-seq-4: #3fa864;
+  --color-seq-5: #1f7a3e;
   /* legacy aliases so existing utilities keep resolving */
   --color-paper: #f3f4ef;
   --color-paper-2: #e9ebe3;
